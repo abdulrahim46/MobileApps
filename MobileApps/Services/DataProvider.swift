@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol DataProvider {
+    func getMobiles() //-> AnyPublisher<News, NetworkManager.APIError>
+    func getMobileDetails()
+}
