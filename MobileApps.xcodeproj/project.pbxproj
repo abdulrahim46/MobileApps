@@ -20,6 +20,8 @@
 		96182EA027149E5300DCDD9B /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96182E9F27149E5300DCDD9B /* DataProvider.swift */; };
 		96182EAE2714A19E00DCDD9B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96182EAD2714A19E00DCDD9B /* Extension.swift */; };
 		96182EB62714A1D100DCDD9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96182EB52714A1D100DCDD9B /* Constants.swift */; };
+		965215492717B97500FEED35 /* AllMobileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965215482717B97500FEED35 /* AllMobileVC.swift */; };
+		9652154E2717B99A00FEED35 /* FavouriteMobileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652154D2717B99A00FEED35 /* FavouriteMobileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		96182E9F27149E5300DCDD9B /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		96182EAD2714A19E00DCDD9B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		96182EB52714A1D100DCDD9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		965215482717B97500FEED35 /* AllMobileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMobileVC.swift; sourceTree = "<group>"; };
+		9652154D2717B99A00FEED35 /* FavouriteMobileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteMobileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,8 @@
 			children = (
 				96182E6327149DA900DCDD9B /* Main.storyboard */,
 				96182E6127149DA900DCDD9B /* ViewController.swift */,
+				965215482717B97500FEED35 /* AllMobileVC.swift */,
+				9652154D2717B99A00FEED35 /* FavouriteMobileVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,12 +335,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9652154E2717B99A00FEED35 /* FavouriteMobileVC.swift in Sources */,
 				96182EA027149E5300DCDD9B /* DataProvider.swift in Sources */,
 				96182E9227149E2700DCDD9B /* NetworkManager.swift in Sources */,
 				96182EAE2714A19E00DCDD9B /* Extension.swift in Sources */,
 				96182E6227149DA900DCDD9B /* ViewController.swift in Sources */,
 				96182E5E27149DA900DCDD9B /* AppDelegate.swift in Sources */,
 				96182E9B27149E3E00DCDD9B /* URLManager.swift in Sources */,
+				965215492717B97500FEED35 /* AllMobileVC.swift in Sources */,
 				96182E6027149DA900DCDD9B /* SceneDelegate.swift in Sources */,
 				96182EB62714A1D100DCDD9B /* Constants.swift in Sources */,
 			);
