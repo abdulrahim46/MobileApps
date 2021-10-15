@@ -26,17 +26,17 @@ class ViewController: UIViewController {
         let segmentStates = SegmentioStates(
             defaultState: SegmentioState(
                 backgroundColor: .clear,
-                titleFont: UIFont(name: "Avenir-Medium", size: 16.0)!,
+                titleFont: UIFont(name: "Avenir-heavy", size: 16.0)!,
                 titleTextColor: UIColor.lightGray
             ),
             selectedState: SegmentioState(
                 backgroundColor: .clear,
-                titleFont: UIFont(name: "Avenir-Medium", size: 16.0)!,
+                titleFont: UIFont(name: "Avenir-heavy", size: 16.0)!,
                 titleTextColor: .black
             ),
             highlightedState: SegmentioState(
                 backgroundColor: .clear,
-                titleFont: UIFont(name: "Avenir-Medium", size: 16.0)!,
+                titleFont: UIFont(name: "Avenir-heavy", size: 16.0)!,
                 titleTextColor: UIColor.lightGray
             )
         )
