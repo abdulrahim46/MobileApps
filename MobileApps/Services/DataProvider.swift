@@ -8,6 +8,5 @@
 import Foundation
 
 protocol DataProvider {
-    func getMobiles() //-> AnyPublisher<News, NetworkManager.APIError>
-    func getMobileDetails()
+    func request<T: Codable>(urlName:ServiceURLType, expecting: T.Type, completion: @escaping(Result<T, Error>) -> Void)
 }

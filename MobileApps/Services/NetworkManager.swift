@@ -8,16 +8,16 @@
 import Foundation
 import UIKit
 
-class NetworkManager {
+class NetworkManager: DataProvider {
     
-    static let shared = NetworkManager()
-    
+    /// custom error for apis
     enum CustomError: Error {
         case invalidUrl
         case invalidData
     }
     
-    func request<T: Codable>(urlName:ServiceURLType, expecting: T.Type, completion: @escaping(Result<T, Error>) -> Void ) {
+    /// generic request for all apis
+    func request<T: Codable>(urlName:ServiceURLType, expecting: T.Type, completion: @escaping(Result<T, Error>) -> Void) {
         
         let urlString = URLManager.getUrlString(for: urlName)
         let completeUrl = URL(string: urlString)

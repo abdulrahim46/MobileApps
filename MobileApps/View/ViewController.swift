@@ -15,18 +15,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentView: Segmentio!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let network = NetworkManager()
-    
+    let viewModel = AllMobileViewModel()
+    var mobiles: [Mobile]?
     // LifeCycles methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSegmentio()
         setupCollectionView()
-        
-        network.request(urlName: .mobiles, expecting: [Mobile].self) { data in
-            print(data)
-        }
+        fetchingMobiles()
     }
     
     // Setting the views
@@ -39,7 +36,6 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
         collectionView.register(UINib(nibName: "AllCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: AllCollectionViewCell.reuseIdentifier)
-        //collectionView.reloadData()
     }
     
     // Top bar segment setup
@@ -86,30 +82,36 @@ class ViewController: UIViewController {
         
         segmentView.selectedSegmentioIndex = 0
         
-        segmentView.valueDidChange = {[weak self] segmentio, segmentIndex in
+        segmentView.valueDidChange = { [weak self] segmentio, segmentIndex in
 //            let index = LearnModulesSegmentOption.init(rawValue: segmentIndex) ?? LearnModulesSegmentOption.Active
 //            self?.handleSegmentSelection(index)
         }
-        
+    }
+    
+    // calling fetch api
+    func fetchingMobiles() {
+        viewModel.getAllMobiles() { [weak self] mobiles, error in
+            self?.mobiles = mobiles
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
     }
 }
-
 
 // MARK:- Extension for collectionview methods
 /// CollectionView delegate & datasource methods.
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return mobiles?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllCollectionViewCell.reuseIdentifier, for: indexPath) as? AllCollectionViewCell else {
             fatalError("Could not dequeue AllCollectionViewCell")
         }
-        cell.configure()
-       // viewModel.configure(item: cell, for: indexPath)
-        
+        cell.configure(mobile: viewModel.mobiles[indexPath.row])
         return cell
     }
     

@@ -23,8 +23,13 @@ class AllCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configure() {
-       // title.text = ""
+    ///Configure the cell data here
+    
+    func configure(mobile: Mobile) {
+        title.text = mobile.title
+        descriptionLabel.text = mobile.description
+        priceLabel.text = "Price: \(mobile.price ?? 0.0)"
+        ratingLabel.text = "Rating: \(mobile.rating ?? 0.0)"
     }
 
 }
