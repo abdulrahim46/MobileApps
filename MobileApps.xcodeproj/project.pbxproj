@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		96182EB62714A1D100DCDD9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96182EB52714A1D100DCDD9B /* Constants.swift */; };
 		965215492717B97500FEED35 /* AllMobileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965215482717B97500FEED35 /* AllMobileVC.swift */; };
 		9652154E2717B99A00FEED35 /* FavouriteMobileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652154D2717B99A00FEED35 /* FavouriteMobileVC.swift */; };
+		9652157427191C9B00FEED35 /* MobileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652157327191C9B00FEED35 /* MobileCollectionViewCell.swift */; };
 		A65D1D25B768F79971550E2D /* Pods_MobileApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DBE6DBE95FD4A72095A52F /* Pods_MobileApps.framework */; };
 		E67CCBD06F35BAFD0E084FD1 /* Pods_MobileAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05141F157A68D4BDED85D53F /* Pods_MobileAppsTests.framework */; };
 		E863DA495996D253DB2719FF /* Pods_MobileApps_MobileAppsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD6F993F0F6FB365EA65EBB /* Pods_MobileApps_MobileAppsUITests.framework */; };
@@ -73,6 +74,7 @@
 		96182EB52714A1D100DCDD9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		965215482717B97500FEED35 /* AllMobileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMobileVC.swift; sourceTree = "<group>"; };
 		9652154D2717B99A00FEED35 /* FavouriteMobileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteMobileVC.swift; sourceTree = "<group>"; };
+		9652157327191C9B00FEED35 /* MobileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCollectionViewCell.swift; sourceTree = "<group>"; };
 		9E1F0C9EA04403DE786448CE /* Pods-MobileApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileApps.debug.xcconfig"; path = "Target Support Files/Pods-MobileApps/Pods-MobileApps.debug.xcconfig"; sourceTree = "<group>"; };
 		BABBD569C7B007B509911B10 /* Pods-MobileApps-MobileAppsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileApps-MobileAppsUITests.release.xcconfig"; path = "Target Support Files/Pods-MobileApps-MobileAppsUITests/Pods-MobileApps-MobileAppsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +117,6 @@
 				3714B524207760CA5DA52C2A /* Pods-MobileAppsTests.debug.xcconfig */,
 				2E50EABEEF48CCE26D4EE058 /* Pods-MobileAppsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -195,6 +196,7 @@
 		96182EA527149E7100DCDD9B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9652157227191C8300FEED35 /* Cell */,
 				96182E6327149DA900DCDD9B /* Main.storyboard */,
 				96182E6127149DA900DCDD9B /* ViewController.swift */,
 				965215482717B97500FEED35 /* AllMobileVC.swift */,
@@ -234,6 +236,14 @@
 				96182EB52714A1D100DCDD9B /* Constants.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		9652157227191C8300FEED35 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9652157327191C9B00FEED35 /* MobileCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A685F6A2A42992C21ACA9979 /* Frameworks */ = {
@@ -494,6 +504,7 @@
 				965215492717B97500FEED35 /* AllMobileVC.swift in Sources */,
 				96182E6027149DA900DCDD9B /* SceneDelegate.swift in Sources */,
 				96182EB62714A1D100DCDD9B /* Constants.swift in Sources */,
+				9652157427191C9B00FEED35 /* MobileCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

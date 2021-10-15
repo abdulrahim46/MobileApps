@@ -10,14 +10,31 @@ import Segmentio
 
 class ViewController: UIViewController {
     
+    //  Views & Properties
     
     @IBOutlet weak var segmentView: Segmentio!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    // LifeCycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupSegmentio()
+        setupCollectionView()
     }
+    
+    // Setting the views
+    
+    func setupCollectionView() {
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        /// Assigning data source and background color
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.backgroundColor = .black
+    }
+    
+    // Top bar segment setup
     
     func setupSegmentio() {
         let content = [SegmentioItem(title: "All", image: nil),
@@ -67,5 +84,21 @@ class ViewController: UIViewController {
         }
         
     }
+}
+
+
+// MARK:- Extension for collectionview methods
+/// CollectionView delegate & datasource methods.
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
+    
 }
 

@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,6 +32,26 @@
                                     <constraint firstAttribute="height" constant="1" id="pKH-Ss-YpK"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RXH-x5-VfD">
+                                <rect key="frame" x="0.0" y="51" width="414" height="723"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cLL-6U-CZM">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xcN-7F-Q7c">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sFo-Hz-Nwd">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -38,13 +59,18 @@
                             <constraint firstItem="zCR-qA-fxT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0jy-hm-3e7"/>
                             <constraint firstItem="zCR-qA-fxT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ckp-74-zSC"/>
                             <constraint firstItem="Vox-m9-VfR" firstAttribute="top" secondItem="zCR-qA-fxT" secondAttribute="bottom" id="TA8-Xb-y7R"/>
+                            <constraint firstItem="RXH-x5-VfD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xad-c9-fOZ"/>
+                            <constraint firstItem="RXH-x5-VfD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aig-yf-D0i"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zCR-qA-fxT" secondAttribute="trailing" id="lkS-68-cEE"/>
                             <constraint firstItem="Vox-m9-VfR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nd0-PN-vPS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vox-m9-VfR" secondAttribute="trailing" id="rO7-KT-VlN"/>
+                            <constraint firstItem="RXH-x5-VfD" firstAttribute="top" secondItem="Vox-m9-VfR" secondAttribute="bottom" id="syS-Qg-VO1"/>
+                            <constraint firstItem="RXH-x5-VfD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yE4-SE-HDk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j3O-jf-KrQ"/>
                     <connections>
+                        <outlet property="collectionView" destination="RXH-x5-VfD" id="pwS-tv-gGb"/>
                         <outlet property="segmentView" destination="zCR-qA-fxT" id="NEt-cW-gAG"/>
                     </connections>
                 </viewController>
