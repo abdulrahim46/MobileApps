@@ -15,12 +15,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentView: Segmentio!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    // LifeCycles
+    let network = NetworkManager()
+    
+    // LifeCycles methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSegmentio()
         setupCollectionView()
+        
+        network.request(urlName: .mobiles, expecting: [Mobile].self) { data in
+            print(data)
+        }
     }
     
     // Setting the views
