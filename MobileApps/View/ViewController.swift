@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     var noDataLabel = UILabel()
     
     let viewModel = AllMobileViewModel()
+    let favourVm = FavouriteViewModel()
     var mobiles = [Mobile]()
     var favouriteMobiles = [Mobile]()
     
@@ -117,7 +118,7 @@ class ViewController: UIViewController {
                 emptyImageView.isHidden = false
             }
         } else {
-            if favouriteMobiles.count > 0 {
+            if favourVm.mobiles.count > 0 {
                 collectionView.isHidden = false
                 emptyImageView.isHidden = true
             } else {
@@ -136,6 +137,7 @@ class ViewController: UIViewController {
                 self?.collectionView.reloadData()
             }
         }
+        favourVm.getFavouriteMobile()
     }
 }
 
@@ -143,16 +145,31 @@ class ViewController: UIViewController {
 /// CollectionView delegate & datasource methods.
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mobiles.count
+        if segmentView.selectedSegmentioIndex == MobileSegmentOption.All.rawValue {
+            return mobiles.count
+        } else {
+            return favourVm.mobiles.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllCollectionViewCell.reuseIdentifier, for: indexPath) as? AllCollectionViewCell else {
-            fatalError("Could not dequeue AllCollectionViewCell")
+        if segmentView.selectedSegmentioIndex == MobileSegmentOption.All.rawValue {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllCollectionViewCell.reuseIdentifier, for: indexPath) as? AllCollectionViewCell else {
+                fatalError("Could not dequeue AllCollectionViewCell")
+            }
+            cell.configure(mobile: mobiles[indexPath.row])
+            return cell
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllCollectionViewCell.reuseIdentifier, for: indexPath) as? AllCollectionViewCell else {
+                fatalError("Could not dequeue AllCollectionViewCell")
+            }
+            cell.configure(mobile: favourVm.mobiles[indexPath.row])
+            return cell
         }
-        cell.configure(mobile: viewModel.mobiles[indexPath.row])
-        return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

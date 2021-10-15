@@ -11,6 +11,9 @@ import SDWebImage
 class AllCollectionViewCell: UICollectionViewCell {
     
     static let reuseIdentifier: String = "AllCollectionViewCell"
+    
+    var mobile: Mobile?
+    var vieModel = FavouriteViewModel()
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var title: UILabel!    
@@ -24,9 +27,10 @@ class AllCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    ///Configure the cell data here
+    /// Configure the cell data here
     
     func configure(mobile: Mobile) {
+        self.mobile = mobile
         title.text = mobile.title
         descriptionLabel.text = mobile.description
         priceLabel.text = "Price: \(mobile.price ?? 0.0)"
@@ -39,5 +43,22 @@ class AllCollectionViewCell: UICollectionViewCell {
         }
 
     }
+    
+    @IBAction func favouriteButtonTap(_ sender: Any) {
+        vieModel.saveFavouriteMobile(mobile: self.mobile!)
+    }
+    
+    
+    
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        mobile = nil
+    }
+    
+    
+    
+    
+    
 
 }
