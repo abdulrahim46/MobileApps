@@ -14,15 +14,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var segmentView: Segmentio!
     @IBOutlet weak var collectionView: UICollectionView!
+    var emptyImageView = UIImageView()
+    var noDataLabel = UILabel()
     
     let viewModel = AllMobileViewModel()
-    var mobiles: [Mobile]?
+    var mobiles = [Mobile]()
+    var favouriteMobiles = [Mobile]()
+    
     // LifeCycles methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSegmentio()
         setupCollectionView()
+        setupEmptyView()
         fetchingMobiles()
     }
     
@@ -36,6 +41,17 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
         collectionView.register(UINib(nibName: "AllCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: AllCollectionViewCell.reuseIdentifier)
+    }
+    
+    func setupEmptyView() {
+        emptyImageView.contentMode = UIView.ContentMode.scaleAspectFit
+        emptyImageView.frame.size.width = 200
+        emptyImageView.frame.size.height = 100
+        emptyImageView.center = self.view.center
+
+        emptyImageView.image = UIImage(named: "no-data")
+        emptyImageView.isHidden = true
+        view.addSubview(emptyImageView)
     }
     
     // Top bar segment setup
@@ -83,15 +99,39 @@ class ViewController: UIViewController {
         segmentView.selectedSegmentioIndex = 0
         
         segmentView.valueDidChange = { [weak self] segmentio, segmentIndex in
-//            let index = LearnModulesSegmentOption.init(rawValue: segmentIndex) ?? LearnModulesSegmentOption.Active
-//            self?.handleSegmentSelection(index)
+            let index = MobileSegmentOption.init(rawValue: segmentIndex) ?? MobileSegmentOption.All
+            self?.handleSegmentSelection(index)
         }
     }
+    
+    // handle the segment change
+    func handleSegmentSelection(_ index: MobileSegmentOption) {
+        // Reload Collection View with selected modules type
+        collectionView.reloadData()
+        if index == .All {
+            if mobiles.count > 0 {
+                collectionView.isHidden = false
+                emptyImageView.isHidden = true
+            } else {
+                collectionView.isHidden = true
+                emptyImageView.isHidden = false
+            }
+        } else {
+            if favouriteMobiles.count > 0 {
+                collectionView.isHidden = false
+                emptyImageView.isHidden = true
+            } else {
+                collectionView.isHidden = true
+                emptyImageView.isHidden = false
+            }
+        }
+    }
+
     
     // calling fetch api
     func fetchingMobiles() {
         viewModel.getAllMobiles() { [weak self] mobiles, error in
-            self?.mobiles = mobiles
+            self?.mobiles = mobiles ?? []
             DispatchQueue.main.async {
                 self?.collectionView.reloadData()
             }
@@ -104,7 +144,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mobiles?.count ?? 0
+        return mobiles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -116,7 +156,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = view.frame.width - 10
+        let width = view.frame.width - 30
         return CGSize(width: width, height: 130)
     }
     
