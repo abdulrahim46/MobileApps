@@ -28,6 +28,7 @@
 		9652158E271944C400FEED35 /* MobileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652158D271944C400FEED35 /* MobileDetail.swift */; };
 		965215932719D04800FEED35 /* AllMobileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965215922719D04800FEED35 /* AllMobileViewModel.swift */; };
 		965215AB271A195700FEED35 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965215AA271A195700FEED35 /* Enums.swift */; };
+		965215F7271A2B1200FEED35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 965215F6271A2B1200FEED35 /* GoogleService-Info.plist */; };
 		A65D1D25B768F79971550E2D /* Pods_MobileApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DBE6DBE95FD4A72095A52F /* Pods_MobileApps.framework */; };
 		E67CCBD06F35BAFD0E084FD1 /* Pods_MobileAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05141F157A68D4BDED85D53F /* Pods_MobileAppsTests.framework */; };
 		E863DA495996D253DB2719FF /* Pods_MobileApps_MobileAppsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD6F993F0F6FB365EA65EBB /* Pods_MobileApps_MobileAppsUITests.framework */; };
@@ -85,6 +86,7 @@
 		9652158D271944C400FEED35 /* MobileDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetail.swift; sourceTree = "<group>"; };
 		965215922719D04800FEED35 /* AllMobileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMobileViewModel.swift; sourceTree = "<group>"; };
 		965215AA271A195700FEED35 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		965215F6271A2B1200FEED35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9E1F0C9EA04403DE786448CE /* Pods-MobileApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileApps.debug.xcconfig"; path = "Target Support Files/Pods-MobileApps/Pods-MobileApps.debug.xcconfig"; sourceTree = "<group>"; };
 		BABBD569C7B007B509911B10 /* Pods-MobileApps-MobileAppsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileApps-MobileAppsUITests.release.xcconfig"; path = "Target Support Files/Pods-MobileApps-MobileAppsUITests/Pods-MobileApps-MobileAppsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 				96182E9027149E1500DCDD9B /* Services */,
 				96182E6627149DB100DCDD9B /* Assets.xcassets */,
 				96182E6B27149DB100DCDD9B /* Info.plist */,
+				965215F6271A2B1200FEED35 /* GoogleService-Info.plist */,
 			);
 			path = MobileApps;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 			files = (
 				96182E6A27149DB100DCDD9B /* LaunchScreen.storyboard in Resources */,
 				96182E6727149DB100DCDD9B /* Assets.xcassets in Resources */,
+				965215F7271A2B1200FEED35 /* GoogleService-Info.plist in Resources */,
 				965215842719374300FEED35 /* AllCollectionViewCell.xib in Resources */,
 				96182E6527149DA900DCDD9B /* Main.storyboard in Resources */,
 			);

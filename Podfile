@@ -8,7 +8,8 @@ target 'MobileApps' do
   # Pods for MobileApps
   
   pod 'Segmentio', '~> 4.1'
-  pod 'SDWebImage' 
+  pod 'SDWebImage'
+  pod 'Firebase/Firestore' 
 
   target 'MobileAppsTests' do
     inherit! :search_paths
