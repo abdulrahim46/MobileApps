@@ -99,7 +99,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllCollectionViewCell.reuseIdentifier, for: indexPath) as? AllCollectionViewCell else {
-            fatalError("Could not dequeue topcell")
+            fatalError("Could not dequeue AllCollectionViewCell")
         }
         cell.configure()
        // viewModel.configure(item: cell, for: indexPath)
