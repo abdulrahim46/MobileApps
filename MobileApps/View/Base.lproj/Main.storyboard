@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,14 +16,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCR-qA-fxT" customClass="Segmentio" customModule="Segmentio">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <color key="backgroundColor" name="BasisTableBG"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eMk-x4-JDh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vox-m9-VfR">
+                                <rect key="frame" x="0.0" y="50" width="414" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="pKH-Ss-YpK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zCR-qA-fxT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0jy-hm-3e7"/>
+                            <constraint firstItem="zCR-qA-fxT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ckp-74-zSC"/>
+                            <constraint firstItem="Vox-m9-VfR" firstAttribute="top" secondItem="zCR-qA-fxT" secondAttribute="bottom" id="TA8-Xb-y7R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zCR-qA-fxT" secondAttribute="trailing" id="lkS-68-cEE"/>
+                            <constraint firstItem="Vox-m9-VfR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nd0-PN-vPS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vox-m9-VfR" secondAttribute="trailing" id="rO7-KT-VlN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j3O-jf-KrQ"/>
+                    <connections>
+                        <outlet property="segmentView" destination="zCR-qA-fxT" id="NEt-cW-gAG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
+        </scene>
+        <!--All MobileVC-->
+        <scene sceneID="wDF-qV-3w8">
+            <objects>
+                <viewController storyboardIdentifier="all" id="vrd-HF-jKB" customClass="AllMobileVC" customModule="MobileApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Sq-er-2Ew">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="89m-az-LJL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMX-lo-dhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897" y="71"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Lv-qI-1We">
@@ -42,10 +85,31 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
+        <!--Favourite MobileVC-->
+        <scene sceneID="N7D-Ic-Y7x">
+            <objects>
+                <viewController storyboardIdentifier="favourite" id="QGI-68-3Nn" customClass="FavouriteMobileVC" customModule="MobileApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kk4-iu-g3I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Gtv-dH-YQo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Rb-5b-Q5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2706" y="71"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="BasisTableBG">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

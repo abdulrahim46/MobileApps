@@ -14,5 +14,4 @@ class FavouriteMobileVC: UIViewController {
         
     }
     
-    
 }

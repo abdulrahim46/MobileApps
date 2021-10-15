@@ -1,0 +1,1132 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A54737347AB2F935128520F358DCD54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		16CEFFC68AF24AD1FBC66B788B3475A4 /* Pods-MobileAppsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32912AA87827200F3B154678B48C76A2 /* Pods-MobileAppsTests-dummy.m */; };
+		1860468598E484A63902F4327C747820 /* Pods-MobileAppsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DACBC0F4C73CB742F3F72AD4A6F7C45 /* Pods-MobileAppsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18EA27B0632ADFF904CE2F78648A7631 /* Pods-MobileApps-MobileAppsUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E190448C6E8D2A85D7E1FC8FEF6279E8 /* Pods-MobileApps-MobileAppsUITests-dummy.m */; };
+		24E7B34ABFFA98FB5EE4E5DAB72E7E24 /* SegmentioCellWithImageAfterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D394D46B3611C822E7430E7E585E990 /* SegmentioCellWithImageAfterLabel.swift */; };
+		2DCD1F71F107BE948BF9F89F6BB17195 /* BadgeWithCounterViewBigSized.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B36130AF853BD5D7CC609180A33B2F /* BadgeWithCounterViewBigSized.xib */; };
+		31E64AC0792E02AC5016A5BA679FD66D /* Pods-MobileApps-MobileAppsUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0288849E76CBBC36D72978E428CF0BF /* Pods-MobileApps-MobileAppsUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		496627DE7441564CCEB4131460FC3F13 /* SegmentioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C9BA647679A928BD58F41D7C9DD209 /* SegmentioCell.swift */; };
+		6B70C4873C4579B570C432D918D4975C /* BadgeWithCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A4594DF6D958AD8D5CED77A6613B45 /* BadgeWithCounterView.swift */; };
+		6F7CF8485BE3D7BC5E7885DB9DFB0FB1 /* Segmentio-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2AF1221E6A553678748959F1A3FEEA7 /* Segmentio-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73A0D6882DB4CA22AE5DBE6367EAF6F2 /* Segmentio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1C69C0A7883827549E1E3A10B945A9 /* Segmentio.swift */; };
+		79B88726AC475C3E18C7649B4BF655A8 /* SegmentioCellWithImageBeforeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A605768E60BE39D54E0944469A8812 /* SegmentioCellWithImageBeforeLabel.swift */; };
+		7B656C4C72ED40D5FFCA2E46B0CDA030 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7E0430E015C073EC4A2BC1A83CDDB91A /* SegmentioOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C3710018B3024C2EBB94798D1D5903 /* SegmentioOptions.swift */; };
+		9766E5394F297B2A5C15D99BA02EB194 /* BadgeWithCounterViewStandardSized.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B4A9CEF006BC1AF2CCFC364E656BC6 /* BadgeWithCounterViewStandardSized.xib */; };
+		A24FEE6EEFBA4C4E94F91711272F107B /* Pods-MobileApps-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68323048ED9D0AA398E5800BD9C981F7 /* Pods-MobileApps-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B06BB833D62EBFEE1ED0E76B3D1D2680 /* Segmentio.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C8F2C375082C9FA86026FA0A69016000 /* Segmentio.bundle */; };
+		B5A5AE94CEC0D085FFFC6E9166794F8D /* Segmentio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FF74C651CE1B457209F901CAAE1D80 /* Segmentio-dummy.m */; };
+		B7B8BEDCE68F4ABA119F5DC2874D2ABA /* BadgeWithCounterViewBigSized.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B36130AF853BD5D7CC609180A33B2F /* BadgeWithCounterViewBigSized.xib */; };
+		BD8B5AC67578DD4C87E7736ABACCD865 /* UIView+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A5C49DF7E44DC724D714B3366800C3 /* UIView+Appearance.swift */; };
+		CC95557010628929347F6E820AAD33D7 /* SegmentioCellWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45A115F99CACE7C4E786976B7598070 /* SegmentioCellWithImage.swift */; };
+		D1715A6A179A03203C4F3CBA829430FF /* SegmentioCellWithImageUnderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CCA1A93C7A17C49015D6BEEB0B385E /* SegmentioCellWithImageUnderLabel.swift */; };
+		E0A9281F5D019FAE5B65A33383686855 /* SegmentioCellWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBC69D7042FC25109831DFA96EDE06B /* SegmentioCellWithLabel.swift */; };
+		E4CA4FDF7F548C9F06C104E8298C0DA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E7220AC2CE9FA8532A9203EC3D38DAC1 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37903C0161C3DE2E01B6AC9722986457 /* RoundImageView.swift */; };
+		E940541BDC6A4973043306F04D779419 /* BadgeWithCounterViewStandardSized.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80B4A9CEF006BC1AF2CCFC364E656BC6 /* BadgeWithCounterViewStandardSized.xib */; };
+		EE4E5E5FFA1F385C6FDCB709088DFF9E /* SegmentioCellWithImageOverLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130ECB1AA82131B47DC4E25F9B6244BC /* SegmentioCellWithImageOverLabel.swift */; };
+		F92F00D5D5EDBAACC7937213BB517BCF /* BadgeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B3D6843FF40075CED2BED707A8384 /* BadgeViewPresenter.swift */; };
+		FA02D299C70BB0D53EBE380F7C141A49 /* Pods-MobileApps-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6712007F056BCC05230F3C72D3C401A2 /* Pods-MobileApps-dummy.m */; };
+		FF02758338424D7BB17F42A37D2AAAED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50D28AE250AC45C0288079451DCD05E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37D946402EAE11D13E8A8CBB3B95D011;
+			remoteInfo = Segmentio;
+		};
+		8478C4A612E78B68B47FF0CB74725FD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7828D4E370FCFEB054367E97275640E3;
+			remoteInfo = "Pods-MobileApps";
+		};
+		A186F535FAD6A058098B5CD14627771F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37D946402EAE11D13E8A8CBB3B95D011;
+			remoteInfo = Segmentio;
+		};
+		FA9E78F3A2ABE71A27B7F44622879F91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFCF7D29EC7396E4018DB1E49BC64FFE;
+			remoteInfo = "Segmentio-Segmentio";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01C9BA647679A928BD58F41D7C9DD209 /* SegmentioCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentioCell.swift; path = Segmentio/Source/Cells/SegmentioCell.swift; sourceTree = "<group>"; };
+		063825D900CF03967B14451980DEC9F5 /* Pods-MobileApps-MobileAppsUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MobileApps-MobileAppsUITests.modulemap"; sourceTree = "<group>"; };
+		10A605768E60BE39D54E0944469A8812 /* SegmentioCellWithImageBeforeLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentioCellWithImageBeforeLabel.swift; path = Segmentio/Source/Cells/SegmentioCellWithImageBeforeLabel.swift; sourceTree = "<group>"; };
+		130ECB1AA82131B47DC4E25F9B6244BC /* SegmentioCellWithImageOverLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentioCellWithImageOverLabel.swift; path = Segmentio/Source/Cells/SegmentioCellWithImageOverLabel.swift; sourceTree = "<group>"; };
+		1FA8BF8D326044FA87F53851D7C873F0 /* Pods-MobileAppsTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileAppsTests-Info.plist"; sourceTree = "<group>"; };
+		2A2D24956E7486D52CEE2FDE266B7266 /* Pods-MobileApps-MobileAppsUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileApps-MobileAppsUITests-Info.plist"; sourceTree = "<group>"; };
+		2A2ECC3667336ADC06AA532FC4178B7B /* Segmentio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Segmentio.debug.xcconfig; sourceTree = "<group>"; };
+		32912AA87827200F3B154678B48C76A2 /* Pods-MobileAppsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MobileAppsTests-dummy.m"; sourceTree = "<group>"; };
+		33D2D10A4A377F28E9227ED49E5AD4CB /* Pods_MobileAppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MobileAppsTests.framework; path = "Pods-MobileAppsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35538C16B22AE1B76704942CC7E271F1 /* Segmentio-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Segmentio-prefix.pch"; sourceTree = "<group>"; };
+		357921CB15A55878C211208D6F138479 /* Segmentio.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Segmentio.modulemap; sourceTree = "<group>"; };
+		36CC5D303487110254DF01C707856AC5 /* Segmentio-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Segmentio-Info.plist"; sourceTree = "<group>"; };
+		37903C0161C3DE2E01B6AC9722986457 /* RoundImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundImageView.swift; path = Segmentio/Source/Extensions/RoundImageView.swift; sourceTree = "<group>"; };
+		3B6B3D6843FF40075CED2BED707A8384 /* BadgeViewPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BadgeViewPresenter.swift; path = Segmentio/Source/Badge/BadgeViewPresenter.swift; sourceTree = "<group>"; };
+		3DACBC0F4C73CB742F3F72AD4A6F7C45 /* Pods-MobileAppsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MobileAppsTests-umbrella.h"; sourceTree = "<group>"; };
+		3FCB8F06DCBCD36CCF4AA51BFDA7C0C5 /* Pods-MobileApps-MobileAppsUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileApps-MobileAppsUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		42F5E6D4312CEC4CE34E769F09708572 /* Pods-MobileApps.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MobileApps.modulemap"; sourceTree = "<group>"; };
+		4CD83A6A01902C6E10230A47D437B91C /* Pods-MobileApps-MobileAppsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileApps-MobileAppsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4DA9E58B394A6671BE8DA80828405E2D /* Pods-MobileApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileApps.debug.xcconfig"; sourceTree = "<group>"; };
+		54FF74C651CE1B457209F901CAAE1D80 /* Segmentio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Segmentio-dummy.m"; sourceTree = "<group>"; };
+		56656E0900F202737B45687C1A0DFE59 /* Pods-MobileAppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileAppsTests.release.xcconfig"; sourceTree = "<group>"; };
+		5D394D46B3611C822E7430E7E585E990 /* SegmentioCellWithImageAfterLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentioCellWithImageAfterLabel.swift; path = Segmentio/Source/Cells/SegmentioCellWithImageAfterLabel.swift; sourceTree = "<group>"; };
+		66A19EBD745169FD97CCA31F65DE18E1 /* Pods-MobileAppsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MobileAppsTests.modulemap"; sourceTree = "<group>"; };
+		6712007F056BCC05230F3C72D3C401A2 /* Pods-MobileApps-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MobileApps-dummy.m"; sourceTree = "<group>"; };
+		67B36130AF853BD5D7CC609180A33B2F /* BadgeWithCounterViewBigSized.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = BadgeWithCounterViewBigSized.xib; path = Segmentio/Source/Badge/Views/BadgeWithCounterViewBigSized.xib; sourceTree = "<group>"; };
+		68323048ED9D0AA398E5800BD9C981F7 /* Pods-MobileApps-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MobileApps-umbrella.h"; sourceTree = "<group>"; };
+		6A907042989F5CC5ED41E050F698DD05 /* Pods-MobileApps-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileApps-acknowledgements.plist"; sourceTree = "<group>"; };
+		6D8D752E0F709E49C14F98BD72C89A09 /* Pods-MobileApps-MobileAppsUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileApps-MobileAppsUITests-frameworks.sh"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		79CCA1A93C7A17C49015D6BEEB0B385E /* SegmentioCellWithImageUnderLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentioCellWithImageUnderLabel.swift; path = Segmentio/Source/Cells/SegmentioCellWithImageUnderLabel.swift; sourceTree = "<group>"; };
+		80B4A9CEF006BC1AF2CCFC364E656BC6 /* BadgeWithCounterViewStandardSized.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = BadgeWithCounterViewStandardSized.xib; path = Segmentio/Source/Badge/Views/BadgeWithCounterViewStandardSized.xib; sourceTree = "<group>"; };
+		8708C9982230A2BC65F4DD52C2560C79 /* Pods-MobileApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileApps.release.xcconfig"; sourceTree = "<group>"; };
+		892FBD111A6F30D83D1FA51B1E7C5E8B /* Pods-MobileApps-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MobileApps-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8BB7C85907842B65EFD4D901393302B0 /* Pods-MobileAppsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileAppsTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		90A4594DF6D958AD8D5CED77A6613B45 /* BadgeWithCounterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BadgeWithCounterView.swift; path = Segmentio/Source/Badge/Views/BadgeWithCounterView.swift; sourceTree = "<group>"; };
+		9CE6C82EFBE0416616F625A3893DBCF5 /* Pods_MobileApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MobileApps.framework; path = "Pods-MobileApps.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1A5C49DF7E44DC724D714B3366800C3 /* UIView+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Appearance.swift"; path = "Segmentio/Source/Extensions/UIView+Appearance.swift"; sourceTree = "<group>"; };
+		A576B75E954883C6DC7632FFB05D2BF7 /* Pods-MobileAppsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MobileAppsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B45A115F99CACE7C4E786976B7598070 /* SegmentioCellWithImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentioCellWithImage.swift; path = Segmentio/Source/Cells/SegmentioCellWithImage.swift; sourceTree = "<group>"; };
+		B49A745A135D47591988F2FA763FB87A /* Pods-MobileApps-MobileAppsUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MobileApps-MobileAppsUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BFE6A5F10407E0B819B5B27626495260 /* Pods-MobileApps-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MobileApps-Info.plist"; sourceTree = "<group>"; };
+		C2C3710018B3024C2EBB94798D1D5903 /* SegmentioOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentioOptions.swift; path = Segmentio/Source/SegmentioOptions.swift; sourceTree = "<group>"; };
+		C8F2C375082C9FA86026FA0A69016000 /* Segmentio.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Segmentio.bundle; path = "Segmentio-Segmentio.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D2414B33810D0AE23D100AAE68A847 /* Segmentio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Segmentio.release.xcconfig; sourceTree = "<group>"; };
+		CA87DBF74785AD0522CBDEBB06795F96 /* Pods-MobileApps-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MobileApps-frameworks.sh"; sourceTree = "<group>"; };
+		D0288849E76CBBC36D72978E428CF0BF /* Pods-MobileApps-MobileAppsUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MobileApps-MobileAppsUITests-umbrella.h"; sourceTree = "<group>"; };
+		DA79FCCF719124047D9268A6963ACFB4 /* Pods_MobileApps_MobileAppsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MobileApps_MobileAppsUITests.framework; path = "Pods-MobileApps-MobileAppsUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDBC69D7042FC25109831DFA96EDE06B /* SegmentioCellWithLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentioCellWithLabel.swift; path = Segmentio/Source/Cells/SegmentioCellWithLabel.swift; sourceTree = "<group>"; };
+		DE19F4613CD28EC1525A4E1CF883646A /* Pods-MobileAppsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileAppsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E01058B2ACD9B203D20E18CF5BAEBD59 /* ResourceBundle-Segmentio-Segmentio-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Segmentio-Segmentio-Info.plist"; sourceTree = "<group>"; };
+		E17D1F60CD1816128BD7D11434B9EDC6 /* Segmentio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Segmentio.framework; path = Segmentio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E190448C6E8D2A85D7E1FC8FEF6279E8 /* Pods-MobileApps-MobileAppsUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MobileApps-MobileAppsUITests-dummy.m"; sourceTree = "<group>"; };
+		E83906D389D406A366FA936EB0336AB8 /* Pods-MobileApps-MobileAppsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MobileApps-MobileAppsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC1C69C0A7883827549E1E3A10B945A9 /* Segmentio.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Segmentio.swift; path = Segmentio/Source/Segmentio.swift; sourceTree = "<group>"; };
+		F2AF1221E6A553678748959F1A3FEEA7 /* Segmentio-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Segmentio-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48B6055E9FED3829A9F690B84FE74F21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B656C4C72ED40D5FFCA2E46B0CDA030 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52EC763DBB9D44A2CB9D899B4C68A21B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A54737347AB2F935128520F358DCD54 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94C5E340AD6EB1CE6168DFF43ADE1BC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF02758338424D7BB17F42A37D2AAAED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8DB755F257592558D0992FC114ACEA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD570EA11CB777759DE9159E3F411A0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4CA4FDF7F548C9F06C104E8298C0DA0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		032F0C8DF95179F8918CA9DC9DA52362 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E01058B2ACD9B203D20E18CF5BAEBD59 /* ResourceBundle-Segmentio-Segmentio-Info.plist */,
+				357921CB15A55878C211208D6F138479 /* Segmentio.modulemap */,
+				54FF74C651CE1B457209F901CAAE1D80 /* Segmentio-dummy.m */,
+				36CC5D303487110254DF01C707856AC5 /* Segmentio-Info.plist */,
+				35538C16B22AE1B76704942CC7E271F1 /* Segmentio-prefix.pch */,
+				F2AF1221E6A553678748959F1A3FEEA7 /* Segmentio-umbrella.h */,
+				2A2ECC3667336ADC06AA532FC4178B7B /* Segmentio.debug.xcconfig */,
+				C9D2414B33810D0AE23D100AAE68A847 /* Segmentio.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Segmentio";
+			sourceTree = "<group>";
+		};
+		2EEB1045734230F77DB718DE98851269 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67B36130AF853BD5D7CC609180A33B2F /* BadgeWithCounterViewBigSized.xib */,
+				80B4A9CEF006BC1AF2CCFC364E656BC6 /* BadgeWithCounterViewStandardSized.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		35432A51594C15E872C3409B7BE74C2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CE6C82EFBE0416616F625A3893DBCF5 /* Pods_MobileApps.framework */,
+				DA79FCCF719124047D9268A6963ACFB4 /* Pods_MobileApps_MobileAppsUITests.framework */,
+				33D2D10A4A377F28E9227ED49E5AD4CB /* Pods_MobileAppsTests.framework */,
+				C8F2C375082C9FA86026FA0A69016000 /* Segmentio.bundle */,
+				E17D1F60CD1816128BD7D11434B9EDC6 /* Segmentio.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D57D4EE7DDF1737B21BC5BE16F9B774 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				54E8D2799DD55304C5E8B20FC7F6CB73 /* Pods-MobileApps */,
+				BDBF9C23328EE8D0FC052182C00F45B8 /* Pods-MobileApps-MobileAppsUITests */,
+				AB95C8C8F6B493E16DE36C185CA7252C /* Pods-MobileAppsTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		54E8D2799DD55304C5E8B20FC7F6CB73 /* Pods-MobileApps */ = {
+			isa = PBXGroup;
+			children = (
+				42F5E6D4312CEC4CE34E769F09708572 /* Pods-MobileApps.modulemap */,
+				892FBD111A6F30D83D1FA51B1E7C5E8B /* Pods-MobileApps-acknowledgements.markdown */,
+				6A907042989F5CC5ED41E050F698DD05 /* Pods-MobileApps-acknowledgements.plist */,
+				6712007F056BCC05230F3C72D3C401A2 /* Pods-MobileApps-dummy.m */,
+				CA87DBF74785AD0522CBDEBB06795F96 /* Pods-MobileApps-frameworks.sh */,
+				BFE6A5F10407E0B819B5B27626495260 /* Pods-MobileApps-Info.plist */,
+				68323048ED9D0AA398E5800BD9C981F7 /* Pods-MobileApps-umbrella.h */,
+				4DA9E58B394A6671BE8DA80828405E2D /* Pods-MobileApps.debug.xcconfig */,
+				8708C9982230A2BC65F4DD52C2560C79 /* Pods-MobileApps.release.xcconfig */,
+			);
+			name = "Pods-MobileApps";
+			path = "Target Support Files/Pods-MobileApps";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9D03AC0A9F0AC0C0812AE3557556C508 /* Segmentio */ = {
+			isa = PBXGroup;
+			children = (
+				3B6B3D6843FF40075CED2BED707A8384 /* BadgeViewPresenter.swift */,
+				90A4594DF6D958AD8D5CED77A6613B45 /* BadgeWithCounterView.swift */,
+				37903C0161C3DE2E01B6AC9722986457 /* RoundImageView.swift */,
+				EC1C69C0A7883827549E1E3A10B945A9 /* Segmentio.swift */,
+				01C9BA647679A928BD58F41D7C9DD209 /* SegmentioCell.swift */,
+				B45A115F99CACE7C4E786976B7598070 /* SegmentioCellWithImage.swift */,
+				5D394D46B3611C822E7430E7E585E990 /* SegmentioCellWithImageAfterLabel.swift */,
+				10A605768E60BE39D54E0944469A8812 /* SegmentioCellWithImageBeforeLabel.swift */,
+				130ECB1AA82131B47DC4E25F9B6244BC /* SegmentioCellWithImageOverLabel.swift */,
+				79CCA1A93C7A17C49015D6BEEB0B385E /* SegmentioCellWithImageUnderLabel.swift */,
+				DDBC69D7042FC25109831DFA96EDE06B /* SegmentioCellWithLabel.swift */,
+				C2C3710018B3024C2EBB94798D1D5903 /* SegmentioOptions.swift */,
+				A1A5C49DF7E44DC724D714B3366800C3 /* UIView+Appearance.swift */,
+				2EEB1045734230F77DB718DE98851269 /* Resources */,
+				032F0C8DF95179F8918CA9DC9DA52362 /* Support Files */,
+			);
+			name = Segmentio;
+			path = Segmentio;
+			sourceTree = "<group>";
+		};
+		AB95C8C8F6B493E16DE36C185CA7252C /* Pods-MobileAppsTests */ = {
+			isa = PBXGroup;
+			children = (
+				66A19EBD745169FD97CCA31F65DE18E1 /* Pods-MobileAppsTests.modulemap */,
+				A576B75E954883C6DC7632FFB05D2BF7 /* Pods-MobileAppsTests-acknowledgements.markdown */,
+				8BB7C85907842B65EFD4D901393302B0 /* Pods-MobileAppsTests-acknowledgements.plist */,
+				32912AA87827200F3B154678B48C76A2 /* Pods-MobileAppsTests-dummy.m */,
+				1FA8BF8D326044FA87F53851D7C873F0 /* Pods-MobileAppsTests-Info.plist */,
+				3DACBC0F4C73CB742F3F72AD4A6F7C45 /* Pods-MobileAppsTests-umbrella.h */,
+				DE19F4613CD28EC1525A4E1CF883646A /* Pods-MobileAppsTests.debug.xcconfig */,
+				56656E0900F202737B45687C1A0DFE59 /* Pods-MobileAppsTests.release.xcconfig */,
+			);
+			name = "Pods-MobileAppsTests";
+			path = "Target Support Files/Pods-MobileAppsTests";
+			sourceTree = "<group>";
+		};
+		BDBF9C23328EE8D0FC052182C00F45B8 /* Pods-MobileApps-MobileAppsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				063825D900CF03967B14451980DEC9F5 /* Pods-MobileApps-MobileAppsUITests.modulemap */,
+				B49A745A135D47591988F2FA763FB87A /* Pods-MobileApps-MobileAppsUITests-acknowledgements.markdown */,
+				3FCB8F06DCBCD36CCF4AA51BFDA7C0C5 /* Pods-MobileApps-MobileAppsUITests-acknowledgements.plist */,
+				E190448C6E8D2A85D7E1FC8FEF6279E8 /* Pods-MobileApps-MobileAppsUITests-dummy.m */,
+				6D8D752E0F709E49C14F98BD72C89A09 /* Pods-MobileApps-MobileAppsUITests-frameworks.sh */,
+				2A2D24956E7486D52CEE2FDE266B7266 /* Pods-MobileApps-MobileAppsUITests-Info.plist */,
+				D0288849E76CBBC36D72978E428CF0BF /* Pods-MobileApps-MobileAppsUITests-umbrella.h */,
+				E83906D389D406A366FA936EB0336AB8 /* Pods-MobileApps-MobileAppsUITests.debug.xcconfig */,
+				4CD83A6A01902C6E10230A47D437B91C /* Pods-MobileApps-MobileAppsUITests.release.xcconfig */,
+			);
+			name = "Pods-MobileApps-MobileAppsUITests";
+			path = "Target Support Files/Pods-MobileApps-MobileAppsUITests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				FE76CC790F9F954CBB2071DADA027848 /* Pods */,
+				35432A51594C15E872C3409B7BE74C2C /* Products */,
+				4D57D4EE7DDF1737B21BC5BE16F9B774 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE76CC790F9F954CBB2071DADA027848 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D03AC0A9F0AC0C0812AE3557556C508 /* Segmentio */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		317142196F9280F677FD57C4708F737E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1860468598E484A63902F4327C747820 /* Pods-MobileAppsTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A2D7BD08196FFE2FC74D197F85F3B43 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A24FEE6EEFBA4C4E94F91711272F107B /* Pods-MobileApps-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3C3F81FE52AD16E1D1E3078CC2548A1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F7CF8485BE3D7BC5E7885DB9DFB0FB1 /* Segmentio-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFEB641C7BA80BAC4E47DE73A8A93419 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31E64AC0792E02AC5016A5BA679FD66D /* Pods-MobileApps-MobileAppsUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		23976B7A5B6D5163AEDB876DC29FF67E /* Pods-MobileAppsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BDDDED279A7C3D4C93E5B199B51E55F /* Build configuration list for PBXNativeTarget "Pods-MobileAppsTests" */;
+			buildPhases = (
+				317142196F9280F677FD57C4708F737E /* Headers */,
+				9C20096DD0CDF3AF785147A16391454A /* Sources */,
+				94C5E340AD6EB1CE6168DFF43ADE1BC5 /* Frameworks */,
+				AC5EEEA5184E58A51BFE11BF87FAAB99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02C65525D0FEDAE9DBBE1AC1BCA3BF7B /* PBXTargetDependency */,
+			);
+			name = "Pods-MobileAppsTests";
+			productName = "Pods-MobileAppsTests";
+			productReference = 33D2D10A4A377F28E9227ED49E5AD4CB /* Pods_MobileAppsTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		37D946402EAE11D13E8A8CBB3B95D011 /* Segmentio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E6CFE30A003FB7A0F4B73D3A49728DC /* Build configuration list for PBXNativeTarget "Segmentio" */;
+			buildPhases = (
+				B3C3F81FE52AD16E1D1E3078CC2548A1 /* Headers */,
+				76E3D3B72E3CC44721A52DF3CB660A86 /* Sources */,
+				48B6055E9FED3829A9F690B84FE74F21 /* Frameworks */,
+				E574EFFF70E6635F44C67AF20A726199 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54AD7170BD25A89173C1F4EF784D2FFA /* PBXTargetDependency */,
+			);
+			name = Segmentio;
+			productName = Segmentio;
+			productReference = E17D1F60CD1816128BD7D11434B9EDC6 /* Segmentio.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7828D4E370FCFEB054367E97275640E3 /* Pods-MobileApps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33359CB39F2B092045BB434FE8E97D9A /* Build configuration list for PBXNativeTarget "Pods-MobileApps" */;
+			buildPhases = (
+				5A2D7BD08196FFE2FC74D197F85F3B43 /* Headers */,
+				BD24250B52D1F8B2EC843C1A70E298A2 /* Sources */,
+				52EC763DBB9D44A2CB9D899B4C68A21B /* Frameworks */,
+				66E294ACDB4731372A4A8572A78668C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				654154B13279A76782D3CECA98CABDD3 /* PBXTargetDependency */,
+			);
+			name = "Pods-MobileApps";
+			productName = "Pods-MobileApps";
+			productReference = 9CE6C82EFBE0416616F625A3893DBCF5 /* Pods_MobileApps.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AFCF7D29EC7396E4018DB1E49BC64FFE /* Segmentio-Segmentio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA58715E81925666D36B2CFB35D802B3 /* Build configuration list for PBXNativeTarget "Segmentio-Segmentio" */;
+			buildPhases = (
+				158F90FEF96EEDCBBC6ACDCF09636389 /* Sources */,
+				B8DB755F257592558D0992FC114ACEA5 /* Frameworks */,
+				D00970881F5703FD3296071CEA82FA0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Segmentio-Segmentio";
+			productName = "Segmentio-Segmentio";
+			productReference = C8F2C375082C9FA86026FA0A69016000 /* Segmentio.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D5C12371725256D16DB004395881C823 /* Pods-MobileApps-MobileAppsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D9F082B0506E87104F53B9E2C47DC81 /* Build configuration list for PBXNativeTarget "Pods-MobileApps-MobileAppsUITests" */;
+			buildPhases = (
+				FFEB641C7BA80BAC4E47DE73A8A93419 /* Headers */,
+				49432644B1EB561A6B0502D734652C6E /* Sources */,
+				FD570EA11CB777759DE9159E3F411A0C /* Frameworks */,
+				48ABF8855570FEC3A52F9C4F5032BD0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B232E49296C93F1B928DA4EFF1F25E49 /* PBXTargetDependency */,
+			);
+			name = "Pods-MobileApps-MobileAppsUITests";
+			productName = "Pods-MobileApps-MobileAppsUITests";
+			productReference = DA79FCCF719124047D9268A6963ACFB4 /* Pods_MobileApps_MobileAppsUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 35432A51594C15E872C3409B7BE74C2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7828D4E370FCFEB054367E97275640E3 /* Pods-MobileApps */,
+				D5C12371725256D16DB004395881C823 /* Pods-MobileApps-MobileAppsUITests */,
+				23976B7A5B6D5163AEDB876DC29FF67E /* Pods-MobileAppsTests */,
+				37D946402EAE11D13E8A8CBB3B95D011 /* Segmentio */,
+				AFCF7D29EC7396E4018DB1E49BC64FFE /* Segmentio-Segmentio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48ABF8855570FEC3A52F9C4F5032BD0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66E294ACDB4731372A4A8572A78668C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5EEEA5184E58A51BFE11BF87FAAB99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00970881F5703FD3296071CEA82FA0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7B8BEDCE68F4ABA119F5DC2874D2ABA /* BadgeWithCounterViewBigSized.xib in Resources */,
+				E940541BDC6A4973043306F04D779419 /* BadgeWithCounterViewStandardSized.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E574EFFF70E6635F44C67AF20A726199 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCD1F71F107BE948BF9F89F6BB17195 /* BadgeWithCounterViewBigSized.xib in Resources */,
+				9766E5394F297B2A5C15D99BA02EB194 /* BadgeWithCounterViewStandardSized.xib in Resources */,
+				B06BB833D62EBFEE1ED0E76B3D1D2680 /* Segmentio.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		158F90FEF96EEDCBBC6ACDCF09636389 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49432644B1EB561A6B0502D734652C6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18EA27B0632ADFF904CE2F78648A7631 /* Pods-MobileApps-MobileAppsUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76E3D3B72E3CC44721A52DF3CB660A86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F92F00D5D5EDBAACC7937213BB517BCF /* BadgeViewPresenter.swift in Sources */,
+				6B70C4873C4579B570C432D918D4975C /* BadgeWithCounterView.swift in Sources */,
+				E7220AC2CE9FA8532A9203EC3D38DAC1 /* RoundImageView.swift in Sources */,
+				B5A5AE94CEC0D085FFFC6E9166794F8D /* Segmentio-dummy.m in Sources */,
+				73A0D6882DB4CA22AE5DBE6367EAF6F2 /* Segmentio.swift in Sources */,
+				496627DE7441564CCEB4131460FC3F13 /* SegmentioCell.swift in Sources */,
+				CC95557010628929347F6E820AAD33D7 /* SegmentioCellWithImage.swift in Sources */,
+				24E7B34ABFFA98FB5EE4E5DAB72E7E24 /* SegmentioCellWithImageAfterLabel.swift in Sources */,
+				79B88726AC475C3E18C7649B4BF655A8 /* SegmentioCellWithImageBeforeLabel.swift in Sources */,
+				EE4E5E5FFA1F385C6FDCB709088DFF9E /* SegmentioCellWithImageOverLabel.swift in Sources */,
+				D1715A6A179A03203C4F3CBA829430FF /* SegmentioCellWithImageUnderLabel.swift in Sources */,
+				E0A9281F5D019FAE5B65A33383686855 /* SegmentioCellWithLabel.swift in Sources */,
+				7E0430E015C073EC4A2BC1A83CDDB91A /* SegmentioOptions.swift in Sources */,
+				BD8B5AC67578DD4C87E7736ABACCD865 /* UIView+Appearance.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C20096DD0CDF3AF785147A16391454A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16CEFFC68AF24AD1FBC66B788B3475A4 /* Pods-MobileAppsTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD24250B52D1F8B2EC843C1A70E298A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA02D299C70BB0D53EBE380F7C141A49 /* Pods-MobileApps-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02C65525D0FEDAE9DBBE1AC1BCA3BF7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MobileApps";
+			target = 7828D4E370FCFEB054367E97275640E3 /* Pods-MobileApps */;
+			targetProxy = 8478C4A612E78B68B47FF0CB74725FD5 /* PBXContainerItemProxy */;
+		};
+		54AD7170BD25A89173C1F4EF784D2FFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Segmentio-Segmentio";
+			target = AFCF7D29EC7396E4018DB1E49BC64FFE /* Segmentio-Segmentio */;
+			targetProxy = FA9E78F3A2ABE71A27B7F44622879F91 /* PBXContainerItemProxy */;
+		};
+		654154B13279A76782D3CECA98CABDD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Segmentio;
+			target = 37D946402EAE11D13E8A8CBB3B95D011 /* Segmentio */;
+			targetProxy = A186F535FAD6A058098B5CD14627771F /* PBXContainerItemProxy */;
+		};
+		B232E49296C93F1B928DA4EFF1F25E49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Segmentio;
+			target = 37D946402EAE11D13E8A8CBB3B95D011 /* Segmentio */;
+			targetProxy = 50D28AE250AC45C0288079451DCD05E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		125C51B0F88E28C868DC90BD45E4E727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		28E740778117299D229BD247CF799D20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A2ECC3667336ADC06AA532FC4178B7B /* Segmentio.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Segmentio";
+				IBSC_MODULE = Segmentio;
+				INFOPLIST_FILE = "Target Support Files/Segmentio/ResourceBundle-Segmentio-Segmentio-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Segmentio;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3D4DFF85D35D21720DF2F507C182527D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E83906D389D406A366FA936EB0336AB8 /* Pods-MobileApps-MobileAppsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileApps-MobileAppsUITests/Pods-MobileApps-MobileAppsUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileApps-MobileAppsUITests/Pods-MobileApps-MobileAppsUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		46944D8CF25841A6DCA407C05CC3DB33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CD83A6A01902C6E10230A47D437B91C /* Pods-MobileApps-MobileAppsUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileApps-MobileAppsUITests/Pods-MobileApps-MobileAppsUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileApps-MobileAppsUITests/Pods-MobileApps-MobileAppsUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		54848EA81995B01C31BD332BC1C1DD09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A2ECC3667336ADC06AA532FC4178B7B /* Segmentio.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Segmentio/Segmentio-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Segmentio/Segmentio-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Segmentio/Segmentio.modulemap";
+				PRODUCT_MODULE_NAME = Segmentio;
+				PRODUCT_NAME = Segmentio;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		57F78F3B04670C8CCCD64F170239E1E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9D2414B33810D0AE23D100AAE68A847 /* Segmentio.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Segmentio/Segmentio-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Segmentio/Segmentio-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Segmentio/Segmentio.modulemap";
+				PRODUCT_MODULE_NAME = Segmentio;
+				PRODUCT_NAME = Segmentio;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		69273E6B289E62C46E536C16B11AB1F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56656E0900F202737B45687C1A0DFE59 /* Pods-MobileAppsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileAppsTests/Pods-MobileAppsTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileAppsTests/Pods-MobileAppsTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		92A3E9AC052A7345115439021B218E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		9D4473ECB7CEC2CABDBDB420B3F57589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DA9E58B394A6671BE8DA80828405E2D /* Pods-MobileApps.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileApps/Pods-MobileApps-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileApps/Pods-MobileApps.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9EE315CE81A3A0817FC0E0047B6B8B42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9D2414B33810D0AE23D100AAE68A847 /* Segmentio.release.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Segmentio";
+				IBSC_MODULE = Segmentio;
+				INFOPLIST_FILE = "Target Support Files/Segmentio/ResourceBundle-Segmentio-Segmentio-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Segmentio;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		DA07B1E47C844782A48C2EB5E224E9BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8708C9982230A2BC65F4DD52C2560C79 /* Pods-MobileApps.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileApps/Pods-MobileApps-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileApps/Pods-MobileApps.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F17D6451BE374D2CDA73C96938896473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE19F4613CD28EC1525A4E1CF883646A /* Pods-MobileAppsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MobileAppsTests/Pods-MobileAppsTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MobileAppsTests/Pods-MobileAppsTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33359CB39F2B092045BB434FE8E97D9A /* Build configuration list for PBXNativeTarget "Pods-MobileApps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D4473ECB7CEC2CABDBDB420B3F57589 /* Debug */,
+				DA07B1E47C844782A48C2EB5E224E9BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				125C51B0F88E28C868DC90BD45E4E727 /* Debug */,
+				92A3E9AC052A7345115439021B218E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D9F082B0506E87104F53B9E2C47DC81 /* Build configuration list for PBXNativeTarget "Pods-MobileApps-MobileAppsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D4DFF85D35D21720DF2F507C182527D /* Debug */,
+				46944D8CF25841A6DCA407C05CC3DB33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E6CFE30A003FB7A0F4B73D3A49728DC /* Build configuration list for PBXNativeTarget "Segmentio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54848EA81995B01C31BD332BC1C1DD09 /* Debug */,
+				57F78F3B04670C8CCCD64F170239E1E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BDDDED279A7C3D4C93E5B199B51E55F /* Build configuration list for PBXNativeTarget "Pods-MobileAppsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F17D6451BE374D2CDA73C96938896473 /* Debug */,
+				69273E6B289E62C46E536C16B11AB1F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA58715E81925666D36B2CFB35D802B3 /* Build configuration list for PBXNativeTarget "Segmentio-Segmentio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E740778117299D229BD247CF799D20 /* Debug */,
+				9EE315CE81A3A0817FC0E0047B6B8B42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
