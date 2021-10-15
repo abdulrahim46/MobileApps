@@ -13,7 +13,7 @@ class AllCollectionViewCell: UICollectionViewCell {
     static let reuseIdentifier: String = "AllCollectionViewCell"
     
     var mobile: Mobile?
-    var vieModel = FavouriteViewModel()
+    var viewModel = FavouriteViewModel()
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var title: UILabel!    
@@ -29,7 +29,7 @@ class AllCollectionViewCell: UICollectionViewCell {
     
     /// Configure the cell data here
     
-    func configure(mobile: Mobile) {
+    func configure(mobile: Mobile, index: Int) {
         self.mobile = mobile
         title.text = mobile.title
         descriptionLabel.text = mobile.description
@@ -41,24 +41,23 @@ class AllCollectionViewCell: UICollectionViewCell {
                                   options: .continueInBackground,
                                   completed: nil)
         }
+        
+        if index == 1 {
+            favouriteButton.isHidden = true
+        } else {
+            favouriteButton.isHidden = false
+        }
 
     }
     
     @IBAction func favouriteButtonTap(_ sender: Any) {
-        vieModel.saveFavouriteMobile(mobile: self.mobile!)
+        viewModel.saveFavouriteMobile(mobile: self.mobile!)
+        favouriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        favouriteButton.isUserInteractionEnabled = false /// disable the button for second use
     }
-    
-    
-    
     
     override func prepareForReuse() {
         super.prepareForReuse()
         mobile = nil
     }
-    
-    
-    
-    
-    
-
 }

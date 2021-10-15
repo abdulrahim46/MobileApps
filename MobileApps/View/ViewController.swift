@@ -160,13 +160,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllCollectionViewCell.reuseIdentifier, for: indexPath) as? AllCollectionViewCell else {
                 fatalError("Could not dequeue AllCollectionViewCell")
             }
-            cell.configure(mobile: mobiles[indexPath.row])
+            cell.configure(mobile: mobiles[indexPath.row], index: MobileSegmentOption.All.rawValue)
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllCollectionViewCell.reuseIdentifier, for: indexPath) as? AllCollectionViewCell else {
                 fatalError("Could not dequeue AllCollectionViewCell")
             }
-            cell.configure(mobile: favourVm.mobiles[indexPath.row])
+            cell.configure(mobile: favourVm.mobiles[indexPath.row], index: MobileSegmentOption.Favourite.rawValue)
             return cell
         }
         
