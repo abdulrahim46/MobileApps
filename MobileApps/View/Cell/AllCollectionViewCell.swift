@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AllCollectionViewCell: UICollectionViewCell {
     
@@ -30,6 +31,13 @@ class AllCollectionViewCell: UICollectionViewCell {
         descriptionLabel.text = mobile.description
         priceLabel.text = "Price: \(mobile.price ?? 0.0)"
         ratingLabel.text = "Rating: \(mobile.rating ?? 0.0)"
+        if let imageData = mobile.image {
+            imageView.sd_setImage(with: URL(string: imageData),
+                                  placeholderImage: UIImage(named: "placeholder"),
+                                  options: .continueInBackground,
+                                  completed: nil)
+        }
+
     }
 
 }

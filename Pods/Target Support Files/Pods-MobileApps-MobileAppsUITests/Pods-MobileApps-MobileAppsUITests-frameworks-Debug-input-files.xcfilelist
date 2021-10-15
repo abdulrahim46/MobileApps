@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-MobileApps-MobileAppsUITests/Pods-MobileApps-MobileAppsUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/Segmentio/Segmentio.framework

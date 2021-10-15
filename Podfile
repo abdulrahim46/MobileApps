@@ -7,7 +7,8 @@ target 'MobileApps' do
 
   # Pods for MobileApps
   
-  pod 'Segmentio', '~> 4.1' 
+  pod 'Segmentio', '~> 4.1'
+  pod 'SDWebImage' 
 
   target 'MobileAppsTests' do
     inherit! :search_paths
