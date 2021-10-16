@@ -175,11 +175,14 @@ class ViewController: UIViewController {
     func filterData(index: Int) {
         switch index {
         case 0:
-            mobiles.sort(by: { $0.price ?? 0 > $1.price ?? 0})
+            mobiles.sort(by: { $0.price ?? 0 < $1.price ?? 0 })
+            favourVm.mobiles.sort(by: { $0.price ?? 0 < $1.price ?? 0 })
         case 1:
-            mobiles.sort(by: { $0.price ?? 0 < $1.price ?? 0})
+            mobiles.sort(by: { $0.price ?? 0 > $1.price ?? 0 })
+            favourVm.mobiles.sort(by: { $0.price ?? 0 > $1.price ?? 0 })
         case 2:
-            mobiles.sort(by: { $0.rating ?? 0 > $1.rating ?? 0})
+            mobiles.sort(by: { $0.rating ?? 0 > $1.rating ?? 0 })
+            favourVm.mobiles.sort(by: { $0.rating ?? 0 > $1.rating ?? 0 })
         default:
             break
         }
