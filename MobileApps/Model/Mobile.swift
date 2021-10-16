@@ -14,6 +14,7 @@ struct Mobile: Codable {
     let price: Double?
     let rating: Double?
     let id: Int?
+    var documentID: String?
     
     enum CodingKeys: String, CodingKey {
         case title = "name"
@@ -22,5 +23,6 @@ struct Mobile: Codable {
         case price
         case rating
         case id
+        case documentID
     }
 }

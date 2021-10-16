@@ -47,6 +47,7 @@ class ViewController: UIViewController {
     /// setup Tableview
     func setupTableView() {
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        tableView.tableFooterView = UIView(frame: .zero)
         tableView.isHidden = true
         tableView.allowsSelection = false
         /// Assigning data source and background color
@@ -242,6 +243,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete", handler: { [weak self] _, indexpath in
             
+            self?.favourVm.removeFavouriteMobile(mobile: self?.favourVm.mobiles[indexPath.row])
             self?.favourVm.mobiles.remove(at: indexPath.row)
             self?.tableView.deleteRows(at: [indexPath], with: .automatic)
             

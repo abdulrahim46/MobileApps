@@ -50,10 +50,10 @@ class FavouriteViewModel {
         }
     }
     
-    
+    /// Getting all favourite mobiles of user from FireStore
     func getFavouriteMobile() {
         
-        /// Getting all favourite mobiles of user from FireStore
+        /// get getdocument  snapshot from firestore & decode
         dbCollection.getDocuments { [weak self] (snapShot, error) in
 
             guard let self = self else { return }
@@ -65,12 +65,24 @@ class FavouriteViewModel {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 snapShot.documents.forEach { (document) in
-                    if let mobile = try? decoder.decode(Mobile.self, fromJSONObject: document.data()) {
+                    if var mobile = try? decoder.decode(Mobile.self, fromJSONObject: document.data()) {
+                        mobile.documentID = document.documentID
                         self.mobiles.append(mobile)
                     }
                 }
             }
         }
+    }
+    
+    /// delete data from firestore
+    func removeFavouriteMobile(mobile: Mobile?) {
+        dbCollection.document().collection("favouriteMobile").document(mobile?.documentID ?? "").delete(completion: { (error) in
+            if error != nil {
+                AlertBuilder.failureAlertWithMessage(message: error?.localizedDescription ?? "Could not delete from Database")
+            } else {
+                print("success deleted from firestore")
+            }
+        })
     }
     
 }
