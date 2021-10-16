@@ -10,7 +10,7 @@ import Segmentio
 
 class ViewController: UIViewController {
     
-    //  Views & Properties
+    //MARK:  Views & Properties
     
     @IBOutlet weak var segmentView: Segmentio!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -22,18 +22,27 @@ class ViewController: UIViewController {
     var mobiles = [Mobile]()
     var favouriteMobiles = [Mobile]()
     
-    // LifeCycles methods
-    
+    //MARK: LifeCycles methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        addNavigationItem()
         setupSegmentio()
         setupCollectionView()
         setupEmptyView()
         fetchingMobiles()
     }
     
-    // Setting the views
+    //MARK: Setting the views
+    func addNavigationItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Sort",
+            style: .plain,
+            target: self,
+            action: #selector(sortButtonAction)
+        )
+    }
     
+    /// setup collectionview
     func setupCollectionView() {
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
@@ -56,7 +65,6 @@ class ViewController: UIViewController {
     }
     
     // Top bar segment setup
-    
     func setupSegmentio() {
         let content = [SegmentioItem(title: "All", image: nil),
                        SegmentioItem(title: "Favourite", image: nil)]
@@ -107,7 +115,7 @@ class ViewController: UIViewController {
     
     // handle the segment change
     func handleSegmentSelection(_ index: MobileSegmentOption) {
-        // Reload Collection View with selected modules type
+        /// Reload Collection View with selected modules type
         collectionView.reloadData()
         if index == .All {
             if mobiles.count > 0 {
@@ -129,7 +137,7 @@ class ViewController: UIViewController {
     }
 
     
-    // calling fetch api
+    /// calling fetch api from viewmodel
     func fetchingMobiles() {
         viewModel.getAllMobiles() { [weak self] mobiles, error in
             self?.mobiles = mobiles ?? []
@@ -138,6 +146,44 @@ class ViewController: UIViewController {
             }
         }
         favourVm.getFavouriteMobile()
+    }
+    
+    // MARK: handle actions
+    
+    /// sorting action on tap of specific sorts
+    @objc func sortButtonAction() {
+        /// create the alert
+        let alert = UIAlertController(title: "Sort", message: "", preferredStyle: UIAlertController.Style.alert)
+        
+        /// add the actions (buttons)
+        alert.addAction(UIAlertAction(title: "Price low to high", style: UIAlertAction.Style.default, handler: { [weak self] action in
+            self?.filterData(index: 0)
+        }))
+        alert.addAction(UIAlertAction(title: "Price high to low", style: UIAlertAction.Style.default, handler: { [weak self] action in
+            self?.filterData(index: 1)
+        }))
+        alert.addAction(UIAlertAction(title: "Rating", style: UIAlertAction.Style.default, handler: { [weak self] action in
+            self?.filterData(index: 2)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        
+        /// show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    /// filter data on select of specific sort from sort alert popup
+    func filterData(index: Int) {
+        switch index {
+        case 0:
+            mobiles.sort(by: { $0.price ?? 0 > $1.price ?? 0})
+        case 1:
+            mobiles.sort(by: { $0.price ?? 0 < $1.price ?? 0})
+        case 2:
+            mobiles.sort(by: { $0.rating ?? 0 > $1.rating ?? 0})
+        default:
+            break
+        }
+        collectionView.reloadData()
     }
 }
 

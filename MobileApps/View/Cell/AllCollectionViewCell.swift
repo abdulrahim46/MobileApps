@@ -10,6 +10,7 @@ import SDWebImage
 
 class AllCollectionViewCell: UICollectionViewCell {
     
+    //MARK: Views & Properties
     static let reuseIdentifier: String = "AllCollectionViewCell"
     
     var mobile: Mobile?
@@ -28,7 +29,6 @@ class AllCollectionViewCell: UICollectionViewCell {
     }
     
     /// Configure the cell data here
-    
     func configure(mobile: Mobile, index: Int) {
         self.mobile = mobile
         title.text = mobile.title
@@ -51,8 +51,8 @@ class AllCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func favouriteButtonTap(_ sender: Any) {
-        viewModel.saveFavouriteMobile(mobile: self.mobile!)
-        favouriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        viewModel.saveFavouriteMobile(mobile: mobile!) /// save the data to firebase firestore
+        favouriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal) /// change the button image after tap
         favouriteButton.isUserInteractionEnabled = false /// disable the button for second use
     }
     

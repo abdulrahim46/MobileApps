@@ -78,21 +78,6 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
         </scene>
-        <!--All MobileVC-->
-        <scene sceneID="wDF-qV-3w8">
-            <objects>
-                <viewController storyboardIdentifier="all" id="vrd-HF-jKB" customClass="AllMobileVC" customModule="MobileApps" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9Sq-er-2Ew">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="89m-az-LJL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oMX-lo-dhg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1809" y="94"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Lv-qI-1We">
             <objects>

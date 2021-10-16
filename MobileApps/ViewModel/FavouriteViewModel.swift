@@ -66,7 +66,6 @@ class FavouriteViewModel {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 snapShot.documents.forEach { (document) in
                     if let mobile = try? decoder.decode(Mobile.self, fromJSONObject: document.data()) {
-                        print(mobile)
                         self.mobiles.append(mobile)
                     }
                 }
