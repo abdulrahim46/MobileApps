@@ -31,6 +31,9 @@ class ViewController: UIViewController {
         setupTableView()
         setupEmptyView()
         fetchingMobiles()
+        let screenSize: CGRect = view.bounds
+        let screenheight = screenSize.height * 0.35
+        print(screenheight)
     }
     
     //MARK: Setting the views
@@ -49,7 +52,7 @@ class ViewController: UIViewController {
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.isHidden = true
-        tableView.allowsSelection = false
+        //tableView.allowsSelection = false
         /// Assigning data source and background color
         tableView.delegate = self
         tableView.dataSource = self
@@ -197,6 +200,12 @@ class ViewController: UIViewController {
         }
         tableView.reloadData()
     }
+    
+     func navigateToDetailView(){
+        let storyBoard = UIStoryboard(name: "Main", bundle:nil)
+        let memberDetailsViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        self.navigationController?.pushViewController(memberDetailsViewController, animated: true)
+    }
 }
 
 // MARK:- Extension for collectionview methods
@@ -218,14 +227,20 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                 fatalError("Could not dequeue AllCollectionViewCell")
             }
             cell.configure(mobile: mobiles[indexPath.row], index: MobileSegmentOption.All.rawValue)
+            cell.selectionStyle = .none
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: AllTableViewCell.reuseIdentifier, for: indexPath) as? AllTableViewCell else {
                 fatalError("Could not dequeue AllCollectionViewCell")
             }
             cell.configure(mobile: favourVm.mobiles[indexPath.row], index: MobileSegmentOption.Favourite.rawValue)
+            cell.selectionStyle = .none
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigateToDetailView()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

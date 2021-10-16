@@ -31,6 +31,7 @@
 		96521601271A369800FEED35 /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96521600271A369800FEED35 /* FavouriteViewModel.swift */; };
 		96521627271B433700FEED35 /* AllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96521625271B433700FEED35 /* AllTableViewCell.swift */; };
 		96521628271B433700FEED35 /* AllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96521626271B433700FEED35 /* AllTableViewCell.xib */; };
+		96521630271B6E0500FEED35 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652162F271B6E0500FEED35 /* DetailViewController.swift */; };
 		A65D1D25B768F79971550E2D /* Pods_MobileApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DBE6DBE95FD4A72095A52F /* Pods_MobileApps.framework */; };
 		E67CCBD06F35BAFD0E084FD1 /* Pods_MobileAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05141F157A68D4BDED85D53F /* Pods_MobileAppsTests.framework */; };
 		E863DA495996D253DB2719FF /* Pods_MobileApps_MobileAppsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD6F993F0F6FB365EA65EBB /* Pods_MobileApps_MobileAppsUITests.framework */; };
@@ -91,6 +92,7 @@
 		96521600271A369800FEED35 /* FavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
 		96521625271B433700FEED35 /* AllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTableViewCell.swift; sourceTree = "<group>"; };
 		96521626271B433700FEED35 /* AllTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllTableViewCell.xib; sourceTree = "<group>"; };
+		9652162F271B6E0500FEED35 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9E1F0C9EA04403DE786448CE /* Pods-MobileApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileApps.debug.xcconfig"; path = "Target Support Files/Pods-MobileApps/Pods-MobileApps.debug.xcconfig"; sourceTree = "<group>"; };
 		BABBD569C7B007B509911B10 /* Pods-MobileApps-MobileAppsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileApps-MobileAppsUITests.release.xcconfig"; path = "Target Support Files/Pods-MobileApps-MobileAppsUITests/Pods-MobileApps-MobileAppsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +220,7 @@
 				9652157227191C8300FEED35 /* Cell */,
 				96182E6327149DA900DCDD9B /* Main.storyboard */,
 				96182E6127149DA900DCDD9B /* ViewController.swift */,
+				9652162F271B6E0500FEED35 /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96182EA027149E5300DCDD9B /* DataProvider.swift in Sources */,
+				96521630271B6E0500FEED35 /* DetailViewController.swift in Sources */,
 				96521601271A369800FEED35 /* FavouriteViewModel.swift in Sources */,
 				96521627271B433700FEED35 /* AllTableViewCell.swift in Sources */,
 				96182E9227149E2700DCDD9B /* NetworkManager.swift in Sources */,

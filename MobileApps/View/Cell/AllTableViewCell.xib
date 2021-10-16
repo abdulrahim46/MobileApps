@@ -38,7 +38,6 @@
                             <constraint firstAttribute="height" constant="24" id="9AQ-5u-lFb"/>
                             <constraint firstAttribute="width" constant="24" id="Vu2-KB-gm7"/>
                         </constraints>
-                        <state key="normal" image="star" catalog="system"/>
                         <connections>
                             <action selector="favouriteButtonTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T1e-2e-J40"/>
                         </connections>
@@ -99,6 +98,5 @@
     </objects>
     <resources>
         <image name="mobile" width="841" height="800"/>
-        <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>

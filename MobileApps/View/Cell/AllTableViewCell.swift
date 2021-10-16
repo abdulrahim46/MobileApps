@@ -27,6 +27,11 @@ class AllTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        if #available(iOS 13.0, *) {
+            favouriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     /// Configure the cell data here
