@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     //MARK:  Views & Properties
     
     @IBOutlet weak var segmentView: Segmentio!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
+    
     var emptyImageView = UIImageView()
     var noDataLabel = UILabel()
     
@@ -27,12 +28,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         addNavigationItem()
         setupSegmentio()
-        setupCollectionView()
+        setupTableView()
         setupEmptyView()
         fetchingMobiles()
     }
     
     //MARK: Setting the views
+    /// navigation right button setup
     func addNavigationItem() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Sort",
@@ -42,19 +44,20 @@ class ViewController: UIViewController {
         )
     }
     
-    /// setup collectionview
-    func setupCollectionView() {
-        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
+    /// setup Tableview
+    func setupTableView() {
+        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        tableView.isHidden = true
+        tableView.allowsSelection = false
         /// Assigning data source and background color
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
         if #available(iOS 13.0, *) {
-            collectionView.backgroundColor = .systemBackground
+            tableView.backgroundColor = .systemBackground
         } else {
             // Fallback on earlier versions
         }
-        collectionView.register(UINib(nibName: "AllCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: AllCollectionViewCell.reuseIdentifier)
+        tableView.register(UINib(nibName: "AllTableViewCell", bundle: nil), forCellReuseIdentifier: AllTableViewCell.reuseIdentifier)
     }
     
     func setupEmptyView() {
@@ -62,7 +65,7 @@ class ViewController: UIViewController {
         emptyImageView.frame.size.width = 200
         emptyImageView.frame.size.height = 100
         emptyImageView.center = self.view.center
-
+        
         emptyImageView.image = UIImage(named: "no-data")
         emptyImageView.isHidden = true
         view.addSubview(emptyImageView)
@@ -120,33 +123,34 @@ class ViewController: UIViewController {
     // handle the segment change
     func handleSegmentSelection(_ index: MobileSegmentOption) {
         /// Reload Collection View with selected modules type
-        collectionView.reloadData()
+        tableView.reloadData()
         if index == .All {
             if mobiles.count > 0 {
-                collectionView.isHidden = false
+                tableView.isHidden = false
                 emptyImageView.isHidden = true
             } else {
-                collectionView.isHidden = true
+                tableView.isHidden = true
                 emptyImageView.isHidden = false
             }
         } else {
             if favourVm.mobiles.count > 0 {
-                collectionView.isHidden = false
+                tableView.isHidden = false
                 emptyImageView.isHidden = true
             } else {
-                collectionView.isHidden = true
+                tableView.isHidden = true
                 emptyImageView.isHidden = false
             }
         }
     }
-
+    
     
     /// calling fetch api from viewmodel
     func fetchingMobiles() {
         viewModel.getAllMobiles() { [weak self] mobiles, error in
             self?.mobiles = mobiles ?? []
             DispatchQueue.main.async {
-                self?.collectionView.reloadData()
+                self?.tableView.reloadData()
+                self?.tableView.isHidden = false
             }
         }
         favourVm.getFavouriteMobile()
@@ -190,17 +194,16 @@ class ViewController: UIViewController {
         default:
             break
         }
-        collectionView.reloadData()
+        tableView.reloadData()
     }
 }
 
 // MARK:- Extension for collectionview methods
 /// CollectionView delegate & datasource methods.
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if segmentView.selectedSegmentioIndex == MobileSegmentOption.All.rawValue {
             return mobiles.count
         } else {
@@ -208,26 +211,42 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if segmentView.selectedSegmentioIndex == MobileSegmentOption.All.rawValue {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllCollectionViewCell.reuseIdentifier, for: indexPath) as? AllCollectionViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: AllTableViewCell.reuseIdentifier, for: indexPath) as? AllTableViewCell else {
                 fatalError("Could not dequeue AllCollectionViewCell")
             }
             cell.configure(mobile: mobiles[indexPath.row], index: MobileSegmentOption.All.rawValue)
             return cell
         } else {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AllCollectionViewCell.reuseIdentifier, for: indexPath) as? AllCollectionViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: AllTableViewCell.reuseIdentifier, for: indexPath) as? AllTableViewCell else {
                 fatalError("Could not dequeue AllCollectionViewCell")
             }
             cell.configure(mobile: favourVm.mobiles[indexPath.row], index: MobileSegmentOption.Favourite.rawValue)
             return cell
         }
-        
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = view.frame.width - 30
-        return CGSize(width: width, height: 130)
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if segmentView.selectedSegmentioIndex == MobileSegmentOption.All.rawValue {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete", handler: { [weak self] _, indexpath in
+            
+            self?.favourVm.mobiles.remove(at: indexPath.row)
+            self?.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+        })
+        return [deleteAction]
     }
     
     

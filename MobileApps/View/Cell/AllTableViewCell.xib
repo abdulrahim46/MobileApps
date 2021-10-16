@@ -39,6 +39,9 @@
                             <constraint firstAttribute="width" constant="24" id="Vu2-KB-gm7"/>
                         </constraints>
                         <state key="normal" image="star" catalog="system"/>
+                        <connections>
+                            <action selector="favouriteButtonTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T1e-2e-J40"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this thee sdnbfndsbf  bdgfbsdj bsjdbfjsb bsjdfbjsbsdkjnfbjknsdjkbnjkdsnjkfnbkjsdnfkjbnskjdnbkjnskdjb" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qes-F2-cTU">
                         <rect key="frame" x="120" y="68" width="202" height="38.5"/>
@@ -84,7 +87,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="descriptionLabel" destination="qes-F2-cTU" id="Khw-4K-Rxo"/>
+                <outlet property="favouriteButton" destination="ilf-Kt-RQd" id="207-39-AhE"/>
                 <outlet property="mobileImage" destination="7gz-OK-bVi" id="wtM-jt-ZuD"/>
+                <outlet property="priceLabel" destination="kau-f1-Kx2" id="K9l-EP-SxW"/>
+                <outlet property="ratingLabel" destination="IJL-kg-gn9" id="Oic-66-QRk"/>
+                <outlet property="title" destination="Omw-bR-r7I" id="7qJ-4C-7eK"/>
             </connections>
             <point key="canvasLocation" x="188.40579710144928" y="121.875"/>
         </tableViewCell>
