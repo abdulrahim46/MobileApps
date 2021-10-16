@@ -52,7 +52,11 @@ class AllCollectionViewCell: UICollectionViewCell {
     
     @IBAction func favouriteButtonTap(_ sender: Any) {
         viewModel.saveFavouriteMobile(mobile: mobile!) /// save the data to firebase firestore
-        favouriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal) /// change the button image after tap
+        if #available(iOS 13.0, *) {
+            favouriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal) /// change the button image after tap
+        } else {
+            // Fallback on earlier versions
+        }
         favouriteButton.isUserInteractionEnabled = false /// disable the button for second use
     }
     

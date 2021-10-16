@@ -49,7 +49,11 @@ class ViewController: UIViewController {
         /// Assigning data source and background color
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.backgroundColor = .systemBackground
+        if #available(iOS 13.0, *) {
+            collectionView.backgroundColor = .systemBackground
+        } else {
+            // Fallback on earlier versions
+        }
         collectionView.register(UINib(nibName: "AllCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: AllCollectionViewCell.reuseIdentifier)
     }
     

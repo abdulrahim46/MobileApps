@@ -29,6 +29,9 @@
 		965215F7271A2B1200FEED35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 965215F6271A2B1200FEED35 /* GoogleService-Info.plist */; };
 		965215FC271A303000FEED35 /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965215FB271A303000FEED35 /* AlertBuilder.swift */; };
 		96521601271A369800FEED35 /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96521600271A369800FEED35 /* FavouriteViewModel.swift */; };
+		96521621271B404100FEED35 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96521620271B404100FEED35 /* SecondVC.swift */; };
+		96521627271B433700FEED35 /* AllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96521625271B433700FEED35 /* AllTableViewCell.swift */; };
+		96521628271B433700FEED35 /* AllTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96521626271B433700FEED35 /* AllTableViewCell.xib */; };
 		A65D1D25B768F79971550E2D /* Pods_MobileApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74DBE6DBE95FD4A72095A52F /* Pods_MobileApps.framework */; };
 		E67CCBD06F35BAFD0E084FD1 /* Pods_MobileAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05141F157A68D4BDED85D53F /* Pods_MobileAppsTests.framework */; };
 		E863DA495996D253DB2719FF /* Pods_MobileApps_MobileAppsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD6F993F0F6FB365EA65EBB /* Pods_MobileApps_MobileAppsUITests.framework */; };
@@ -87,6 +90,9 @@
 		965215F6271A2B1200FEED35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		965215FB271A303000FEED35 /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		96521600271A369800FEED35 /* FavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
+		96521620271B404100FEED35 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		96521625271B433700FEED35 /* AllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTableViewCell.swift; sourceTree = "<group>"; };
+		96521626271B433700FEED35 /* AllTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllTableViewCell.xib; sourceTree = "<group>"; };
 		9E1F0C9EA04403DE786448CE /* Pods-MobileApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileApps.debug.xcconfig"; path = "Target Support Files/Pods-MobileApps/Pods-MobileApps.debug.xcconfig"; sourceTree = "<group>"; };
 		BABBD569C7B007B509911B10 /* Pods-MobileApps-MobileAppsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileApps-MobileAppsUITests.release.xcconfig"; path = "Target Support Files/Pods-MobileApps-MobileAppsUITests/Pods-MobileApps-MobileAppsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +220,7 @@
 				9652157227191C8300FEED35 /* Cell */,
 				96182E6327149DA900DCDD9B /* Main.storyboard */,
 				96182E6127149DA900DCDD9B /* ViewController.swift */,
+				96521620271B404100FEED35 /* SecondVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,6 +267,8 @@
 			children = (
 				965215812719374300FEED35 /* AllCollectionViewCell.swift */,
 				965215822719374300FEED35 /* AllCollectionViewCell.xib */,
+				96521625271B433700FEED35 /* AllTableViewCell.swift */,
+				96521626271B433700FEED35 /* AllTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -387,6 +396,7 @@
 				965215F7271A2B1200FEED35 /* GoogleService-Info.plist in Resources */,
 				965215842719374300FEED35 /* AllCollectionViewCell.xib in Resources */,
 				96182E6527149DA900DCDD9B /* Main.storyboard in Resources */,
+				96521628271B433700FEED35 /* AllTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +526,7 @@
 			files = (
 				96182EA027149E5300DCDD9B /* DataProvider.swift in Sources */,
 				96521601271A369800FEED35 /* FavouriteViewModel.swift in Sources */,
+				96521627271B433700FEED35 /* AllTableViewCell.swift in Sources */,
 				96182E9227149E2700DCDD9B /* NetworkManager.swift in Sources */,
 				96182EAE2714A19E00DCDD9B /* Extension.swift in Sources */,
 				96182E6227149DA900DCDD9B /* ViewController.swift in Sources */,
@@ -528,6 +539,7 @@
 				965215FC271A303000FEED35 /* AlertBuilder.swift in Sources */,
 				96182EB62714A1D100DCDD9B /* Constants.swift in Sources */,
 				965215932719D04800FEED35 /* AllMobileViewModel.swift in Sources */,
+				96521621271B404100FEED35 /* SecondVC.swift in Sources */,
 				96521589271943A300FEED35 /* Mobile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,6 +719,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobileApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -714,7 +727,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdul.MobileApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -726,6 +739,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobileApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -733,7 +747,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdul.MobileApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
