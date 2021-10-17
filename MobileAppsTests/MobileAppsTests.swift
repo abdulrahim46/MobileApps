@@ -9,25 +9,68 @@ import XCTest
 @testable import MobileApps
 
 class MobileAppsTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    override class func tearDown() {
+        
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    // test for mobile api logic
+    func test_fetch_mobiles_from_api() {
+        let mock = ApiMockResources()
+        let fetcher = AllMobileViewModel(apiResource: mock)
+        
+        XCTAssertEqual(fetcher.mobiles.count, 0, "starting with no data...")
+        let promise = expectation(description: "loading 5 news data count...")
+        
+        fetcher.getAllMobiles(completion: { mobile, error  in
+            if let error = error {
+                XCTFail()
+                XCTAssertThrowsError(error)
+            } else {
+                if mobile?.count == 5 {
+                    promise.fulfill()
+                }
+            }
+        })
+        wait(for: [promise], timeout: 2)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    // Test for detail api logic
+    func test_fetch_mobiles_details_from_api() {
+        let mock = ApiMockResources()
+        let fetcher = DetailViewModel(apiResource: mock)
+        
+        XCTAssertEqual(fetcher.details.count, 0, "starting with no data...")
+        let promise = expectation(description: "loading 3 images data count...")
+        
+        fetcher.getAllImages(id: "1", completion:{ mobile, error  in
+            if let error = error {
+                XCTFail()
+                XCTAssertThrowsError(error)
+            } else {
+                if mobile?.count == 3 {
+                    promise.fulfill()
+                }
+            }
+        })
+        wait(for: [promise], timeout: 2)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    // Test for firestore logic
+    func test_fetch_favourite_mobiles_from_firestore() {
+        let fetcher = FavouriteViewModel()
+        
+        XCTAssertEqual(fetcher.mobiles.count, 0, "starting with no data...")
+        let promise = expectation(description: "loading data from firestore data count...")
+        
+        fetcher.getFavouriteMobile()
+        if fetcher.mobiles.count == 0 {
+            promise.fulfill()
+        } else {
+            XCTFail()
+            XCTAssertThrowsError("error")
         }
+        wait(for: [promise], timeout: 1)
     }
-
+    
 }
