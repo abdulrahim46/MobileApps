@@ -61,6 +61,7 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: "AllTableViewCell", bundle: nil), forCellReuseIdentifier: AllTableViewCell.reuseIdentifier)
     }
     
+    // empty view setup here
     func setupEmptyView() {
         emptyImageView.contentMode = UIView.ContentMode.scaleAspectFit
         emptyImageView.frame.size.width = 200
@@ -72,6 +73,7 @@ class ViewController: UIViewController {
         view.addSubview(emptyImageView)
     }
     
+    // setting activity indicator here
     func setupActivityLoader() {
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -118,7 +120,7 @@ class ViewController: UIViewController {
             labelTextAlignment: .center,
             segmentStates: segmentStates
         )
-        
+        /// setup for segment view
         segmentView.setup(
             content: content,
             style: SegmentioStyle.onlyLabel,
@@ -127,6 +129,7 @@ class ViewController: UIViewController {
         
         segmentView.selectedSegmentioIndex = 0
         
+        /// changing index
         segmentView.valueDidChange = { [weak self] segmentio, segmentIndex in
             let index = MobileSegmentOption.init(rawValue: segmentIndex) ?? MobileSegmentOption.All
             self?.handleSegmentSelection(index)
@@ -177,13 +180,15 @@ class ViewController: UIViewController {
         /// create the alert
         let alert = UIAlertController(title: "Sort", message: "", preferredStyle: UIAlertController.Style.alert)
         
-        /// add the actions (buttons)
+        /// add the price low actions (buttons)
         alert.addAction(UIAlertAction(title: "Price low to high", style: UIAlertAction.Style.default, handler: { [weak self] action in
             self?.filterData(index: 0)
         }))
+        /// add the price high actions (buttons)
         alert.addAction(UIAlertAction(title: "Price high to low", style: UIAlertAction.Style.default, handler: { [weak self] action in
             self?.filterData(index: 1)
         }))
+        /// add the rating high actions (buttons)
         alert.addAction(UIAlertAction(title: "Rating", style: UIAlertAction.Style.default, handler: { [weak self] action in
             self?.filterData(index: 2)
         }))
@@ -215,6 +220,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // navigate to detail view function
     func navigateToDetailView(mobile: Mobile) {
         let storyBoard = UIStoryboard(name: "Main", bundle:nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
@@ -232,6 +238,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
+    // return the count for tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if segmentView.selectedSegmentioIndex == MobileSegmentOption.All.rawValue {
             return viewModel.mobiles.count
@@ -240,6 +247,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    // configure the cell tableview
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if segmentView.selectedSegmentioIndex == MobileSegmentOption.All.rawValue {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: AllTableViewCell.reuseIdentifier, for: indexPath) as? AllTableViewCell else {
@@ -258,6 +266,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    // navigating to detail view on didselectrow function
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if segmentView.selectedSegmentioIndex == MobileSegmentOption.All.rawValue {
             let mobile = viewModel.mobiles[indexPath.row]
@@ -268,10 +277,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    // tableview height for row
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
     
+    // setting the permission for delete row for different table views
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         if segmentView.selectedSegmentioIndex == MobileSegmentOption.All.rawValue {
             return false
@@ -280,6 +291,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    // delete row from favourite tableview
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete", handler: { [weak self] _, indexpath in
             
