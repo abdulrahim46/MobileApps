@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
             uuid = "1EA0B97F-5F69-4BCE-AF2F-513A5DFC8C93"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             nameForDebugger = "dealloc"
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
