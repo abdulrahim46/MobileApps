@@ -15,8 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentView: Segmentio!
     @IBOutlet weak var tableView: UITableView!
     
-    var emptyImageView = UIImageView()
-    var noDataLabel = UILabel()
+    private var emptyImageView = UIImageView()
+    private var noDataLabel = UILabel()
+    private(set) var loadingIndicator = UIActivityIndicatorView(style: .gray)
     
     let viewModel = AllMobileViewModel()
     let favourVm = FavouriteViewModel()
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
     //MARK: LifeCycles methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupActivityLoader()
         addNavigationItem()
         setupSegmentio()
         setupTableView()
@@ -68,6 +70,18 @@ class ViewController: UIViewController {
         emptyImageView.image = UIImage(named: "no-data")
         emptyImageView.isHidden = true
         view.addSubview(emptyImageView)
+    }
+    
+    func setupActivityLoader() {
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(loadingIndicator)
+        loadingIndicator.startAnimating()
+        NSLayoutConstraint.activate([
+            loadingIndicator.topAnchor.constraint(equalTo: view.topAnchor),
+            loadingIndicator.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
     
     // Top bar segment setup
@@ -150,6 +164,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
                 self?.tableView.isHidden = false
+                self?.loadingIndicator.stopAnimating()
             }
         }
         favourVm.getFavouriteMobile()
@@ -208,7 +223,7 @@ class ViewController: UIViewController {
     }
     
     deinit {
-        print("release everything123")
+        //print("release everything123")
     }
 }
 

@@ -32,7 +32,7 @@
             <Locations>
                <Location
                   uuid = "1EA0B97F-5F69-4BCE-AF2F-513A5DFC8C93 - d678e86d6b527609"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[UIViewController dealloc]"
