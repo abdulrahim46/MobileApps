@@ -25,5 +25,11 @@ struct Constants {
         static let kSuccessMessage = "Success"
         static let kWaitForPost = "Please wait..."
     }
+    
+    
+    struct Message {
+        static  let addedToFavourite = "Mobile has been added to favourite list"
+        static  let deleteFromList = "Mobile has been deleted from favourite list"
+    }
 
 }

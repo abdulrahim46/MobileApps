@@ -26,7 +26,7 @@ class AllMobileViewModel {
                 self?.mobiles = mobiles
             case .failure(let error):
                 completion(nil,error)
-                print(error)
+                AlertBuilder.failureAlertWithMessage(message: error.localizedDescription)
             }
         }
     }

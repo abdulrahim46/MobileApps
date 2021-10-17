@@ -42,7 +42,7 @@ class FavouriteViewModel {
                         if error != nil {
                             AlertBuilder.failureAlertWithMessage(message: error?.localizedDescription ?? "Could not add image to Database")
                         } else {
-                            print("successs saved to firestore")
+                            AlertBuilder.successAlertWithMessage(message: Constants.Message.addedToFavourite)
                         }
                     }
                 }
@@ -80,7 +80,7 @@ class FavouriteViewModel {
             if error != nil {
                 AlertBuilder.failureAlertWithMessage(message: error?.localizedDescription ?? "Could not delete from Database")
             } else {
-                print("success deleted from firestore")
+                AlertBuilder.successAlertWithMessage(message: Constants.Message.deleteFromList)
             }
         })
     }
