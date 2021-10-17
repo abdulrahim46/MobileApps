@@ -10,15 +10,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: - Properties & View
     let viewModel = DetailViewModel()
     var mobile: Mobile?
     
-    fileprivate let collectionV: UICollectionView = {
+    fileprivate let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -59,38 +56,64 @@ class DetailViewController: UIViewController {
         return label
     }()
     
+    private var scrollview: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.alwaysBounceVertical = true
+   
+        return scrollView
+    }()
+    
+    let contentView = UIView()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(scrollview)
         setupCollectionView()
-        setupLabel()
+        setConstraints()
         setupView()
         fetchDetails()
-        collectionView.isHidden = true
-        descriptionLabel.isHidden = true
     }
     
     
     func setupCollectionView() {
-        collectionV.dataSource = self
-        collectionV.delegate = self
-        collectionV.register(DetailCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        collectionV.backgroundColor = .clear
-        [collectionV, overView, priceLabel, ratingLabel].forEach {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(DetailCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.backgroundColor = .clear
+    }
+    
+    func setConstraints() {
+        [contentView, collectionView, descriptionLb, overView, priceLabel, ratingLabel].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview($0)
+            scrollview.addSubview($0)
         }
 
         NSLayoutConstraint.activate([
-            collectionV.topAnchor.constraint(equalTo: view.topAnchor),
-            collectionV.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionV.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionV.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.35),
+            scrollview.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            scrollview.widthAnchor.constraint(equalTo: view.widthAnchor),
+            scrollview.topAnchor.constraint(equalTo: view.topAnchor),
+            scrollview.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            overView.topAnchor.constraint(equalTo: view.topAnchor),
-            overView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            overView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            contentView.centerXAnchor.constraint(equalTo: scrollview.centerXAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollview.widthAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollview.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollview.bottomAnchor),
+            
+            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: view.bounds.height * 0.35),
+            
+            descriptionLb.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 10),
+            descriptionLb.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            descriptionLb.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            
+            overView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            overView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            overView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             overView.heightAnchor.constraint(equalToConstant: 30),
             
             priceLabel.topAnchor.constraint(equalTo: overView.topAnchor),
@@ -98,25 +121,13 @@ class DetailViewController: UIViewController {
             priceLabel.heightAnchor.constraint(equalToConstant: 30),
             
             ratingLabel.topAnchor.constraint(equalTo: overView.topAnchor),
-            ratingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            ratingLabel.heightAnchor.constraint(equalToConstant: 30),
-        ])
-        
-    }
-    
-    func setupLabel() {
-        view.addSubview(descriptionLb)
-        NSLayoutConstraint.activate([
-            descriptionLb.topAnchor.constraint(equalTo: collectionV.bottomAnchor, constant: 10),
-            descriptionLb.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            descriptionLb.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            //descriptionLb.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 10)
+            ratingLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            ratingLabel.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
     func setupView() {
         title = mobile?.title
-        descriptionLabel.text = mobile?.description
         descriptionLb.text = mobile?.description
         priceLabel.text = "Price: $\(mobile?.price ?? 0)"
         ratingLabel.text = "Rating: \(mobile?.rating ?? 0)"
@@ -126,13 +137,13 @@ class DetailViewController: UIViewController {
         let id:String = String(mobile?.id ?? 0)
         viewModel.getAllImages(id: id, completion: { [weak self] res, err  in
             DispatchQueue.main.async {
-                self?.collectionV.reloadData()
+                self?.collectionView.reloadData()
             }
         })
     }
     
     deinit {
-        print("release everything")
+        //print("release everything")
     }
     
 }
