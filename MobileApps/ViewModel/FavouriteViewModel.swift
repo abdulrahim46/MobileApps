@@ -13,7 +13,7 @@ class FavouriteViewModel {
     // Properties for firebase
     let dbCollection = Firestore.firestore().collection(Constants.FireStore.Collections.FavouriteMobiles)
     
-    var mobiles: [Mobile]?
+    var mobiles = [Mobile]()
     
     /// saving favourite  places to firestore
     func saveFavouriteMobile(mobile: Mobile) {
@@ -69,10 +69,10 @@ class FavouriteViewModel {
                 snapShot.documents.forEach { (document) in
                     if var mobile = try? decoder.decode(Mobile.self, fromJSONObject: document.data()) {
                         mobile.documentID = document.documentID
-                        self.mobiles?.append(mobile)
+                        self.mobiles.append(mobile)
                     }
                 }
-                self.mobiles = Array(Set(self.mobiles ?? []))
+                self.mobiles = Array(Set(self.mobiles))
             }
         }
     }

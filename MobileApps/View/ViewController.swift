@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     
     var viewModel = AllMobileViewModel()
     let favourVm = FavouriteViewModel()
-    var favArray = [Mobile]()
     
     //MARK: LifeCycles methods
     override func viewDidLoad() {
@@ -151,7 +150,7 @@ class ViewController: UIViewController {
                 emptyImageView.isHidden = false
             }
         } else {
-            if favourVm.mobiles?.count ?? -1 > 0 {
+            if favourVm.mobiles.count > 0 {
                 tableView.isHidden = false
                 emptyImageView.isHidden = true
             } else {
@@ -165,7 +164,7 @@ class ViewController: UIViewController {
     /// calling fetch api from viewmodel
     func fetchingMobiles() {
         viewModel.getAllMobiles() { [weak self] mobiles, error in
-           // self?.mobiles = mobiles ?? []
+            // self?.mobiles = mobiles ?? []
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
                 self?.tableView.isHidden = false
@@ -207,13 +206,13 @@ class ViewController: UIViewController {
         switch index {
         case 0:
             viewModel.mobiles?.sort(by: { $0.price ?? 0 < $1.price ?? 0 })
-            favourVm.mobiles?.sort(by: { $0.price ?? 0 < $1.price ?? 0 })
+            favourVm.mobiles.sort(by: { $0.price ?? 0 < $1.price ?? 0 })
         case 1:
             viewModel.mobiles?.sort(by: { $0.price ?? 0 > $1.price ?? 0 })
-            favourVm.mobiles?.sort(by: { $0.price ?? 0 > $1.price ?? 0 })
+            favourVm.mobiles.sort(by: { $0.price ?? 0 > $1.price ?? 0 })
         case 2:
             viewModel.mobiles?.sort(by: { $0.rating ?? 0 > $1.rating ?? 0 })
-            favourVm.mobiles?.sort(by: { $0.rating ?? 0 > $1.rating ?? 0 })
+            favourVm.mobiles.sort(by: { $0.rating ?? 0 > $1.rating ?? 0 })
         default:
             break
         }
@@ -262,7 +261,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         if segmentView.selectedSegmentioIndex == MobileSegmentOption.All.rawValue {
             return viewModel.mobiles?.count ?? 0
         } else {
-            return favourVm.mobiles?.count ?? 0
+            return favourVm.mobiles.count
         }
     }
     
@@ -281,9 +280,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: AllTableViewCell.reuseIdentifier, for: indexPath) as? AllTableViewCell else {
                 fatalError("Could not dequeue AllCollectionViewCell")
             }
-            if let mobile = favourVm.mobiles?[indexPath.row] {
-                cell.configure(mobile: mobile, index: MobileSegmentOption.Favourite.rawValue)
-            }
+            let mobile = favourVm.mobiles[indexPath.row]
+            cell.configure(mobile: mobile, index: MobileSegmentOption.Favourite.rawValue)
             cell.selectionStyle = .none
             return cell
         }
@@ -296,9 +294,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                 navigateToDetailView(mobile: mobile)
             }
         } else {
-            if let mobile = favourVm.mobiles?[indexPath.row] {
-                navigateToDetailView(mobile: mobile)
-            }
+            let mobile = favourVm.mobiles[indexPath.row]
+            navigateToDetailView(mobile: mobile)
         }
     }
     
@@ -320,8 +317,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete", handler: { [weak self] _, indexpath in
             
-            self?.favourVm.removeFavouriteMobile(mobile: self?.favourVm.mobiles?[indexPath.row])
-            self?.favourVm.mobiles?.remove(at: indexPath.row)
+            self?.favourVm.removeFavouriteMobile(mobile: self?.favourVm.mobiles[indexPath.row])
+            self?.favourVm.mobiles.remove(at: indexPath.row)
             self?.tableView.deleteRows(at: [indexPath], with: .automatic)
         })
         return [deleteAction]
