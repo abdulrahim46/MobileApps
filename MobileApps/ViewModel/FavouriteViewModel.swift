@@ -67,7 +67,6 @@ class FavouriteViewModel {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 snapShot.documents.forEach { (document) in
-                    print(document.data())
                     if var mobile = try? decoder.decode(Mobile.self, fromJSONObject: document.data()) {
                         mobile.documentID = document.documentID
                         self.mobiles?.append(mobile)
