@@ -9,7 +9,7 @@ import Foundation
 
 class AllMobileViewModel {
     
-    var mobiles = [Mobile]()
+    var mobiles: [Mobile]?
     var apiResource: DataProvider
     
     init(apiResource: DataProvider = NetworkManager()) {

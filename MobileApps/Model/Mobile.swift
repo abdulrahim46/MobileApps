@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Mobile: Codable {
+struct Mobile: Codable, Hashable {
     let title: String?
     let image: String?
     let description: String?

@@ -13,7 +13,7 @@ class FavouriteViewModel {
     // Properties for firebase
     let dbCollection = Firestore.firestore().collection(Constants.FireStore.Collections.FavouriteMobiles)
     
-    var mobiles = [Mobile]()
+    var mobiles: [Mobile]?
     
     /// saving favourite  places to firestore
     func saveFavouriteMobile(mobile: Mobile) {
@@ -42,7 +42,10 @@ class FavouriteViewModel {
                         if error != nil {
                             AlertBuilder.failureAlertWithMessage(message: error?.localizedDescription ?? "Could not add image to Database")
                         } else {
-                            AlertBuilder.successAlertWithMessage(message: Constants.Message.addedToFavourite)
+                            DispatchQueue.main.async {
+                                NotificationCenter.default.post(name: .fetchDataFromFirestore, object: nil)
+                                AlertBuilder.successAlertWithMessage(message: Constants.Message.addedToFavourite)
+                            }
                         }
                     }
                 }
@@ -52,24 +55,25 @@ class FavouriteViewModel {
     
     /// Getting all favourite mobiles of user from FireStore
     func getFavouriteMobile() {
-        
         /// get getdocument  snapshot from firestore & decode
         dbCollection.getDocuments { [weak self] (snapShot, error) in
-
+            
             guard let self = self else { return }
             
             if let error = error {
                 AlertBuilder.failureAlertWithMessage(message: error.localizedDescription)
-
+                
             } else if let snapShot = snapShot {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 snapShot.documents.forEach { (document) in
+                    print(document.data())
                     if var mobile = try? decoder.decode(Mobile.self, fromJSONObject: document.data()) {
                         mobile.documentID = document.documentID
-                        self.mobiles.append(mobile)
+                        self.mobiles?.append(mobile)
                     }
                 }
+                self.mobiles = Array(Set(self.mobiles ?? []))
             }
         }
     }
